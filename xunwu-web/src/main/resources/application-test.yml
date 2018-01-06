@@ -4,3 +4,4 @@ spring:
     url: jdbc:h2:mem:test
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql
+

@@ -1,9 +1,25 @@
 spring:
   profiles:
-    active: test
+    active: dev
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: validate
+  session:
+    # session回话存储类型
+    store-type: hash_map
+  thymeleaf:
+    mode: HTML
+
+security:
+  basic:
+    enabled: false
+
+logging:
+  level: debug
+
+
+
+
 
 
