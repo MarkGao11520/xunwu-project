@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: test
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xunwu-facade/xunwu-facade.iml" filepath="$PROJECT_DIR$/xunwu-facade/xunwu-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xunwu-project.iml" filepath="$PROJECT_DIR$/xunwu-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xunwu-repository/xunwu-repository.iml" filepath="$PROJECT_DIR$/xunwu-repository/xunwu-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xunwu-service/xunwu-service.iml" filepath="$PROJECT_DIR$/xunwu-service/xunwu-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xunwu-web/xunwu-web.iml" filepath="$PROJECT_DIR$/xunwu-web/xunwu-web.iml" />
+    </modules>
+  </component>
+</project>
