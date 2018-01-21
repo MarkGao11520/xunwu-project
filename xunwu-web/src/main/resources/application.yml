@@ -7,9 +7,22 @@ spring:
       ddl-auto: validate
   session:
     # session回话存储类型
-    store-type: hash_map
+    store-type: redis
   thymeleaf:
     mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+  devtools:
+    ## 热加载 静态资源不重启
+    restart:
+      exclude: templates/**,static/**
+  redis:
+    database: 0
+    host: markgao.me
+    pool:
+      min-idle: 1
+    timeout: 3000
+
 
 security:
   basic:
@@ -17,6 +30,19 @@ security:
 
 logging:
   level: debug
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+
+qiniu:
+  AccessKey: W6roYXp9jDFiem-tjgqvoTF3lHIk_YFHhP_8l0_f
+  SecretKey: 6gJo1vhBXB9MrtXYVUY0Tz85677TkQ6Qj6yf5Nfe
+  Bucket:
+  cdn:
+    prefix:
 
 
 

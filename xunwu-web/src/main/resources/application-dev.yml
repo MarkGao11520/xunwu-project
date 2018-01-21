@@ -8,4 +8,11 @@ spring:
   # thymeleaf
   thymeleaf:
     cache: false
+  http:
+    multipart:
+      enabled: true
+      location: /Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/tmp/
+      file-size-threshold: 5MB
+      max-request-size: 20MB
+
 

@@ -21,17 +21,7 @@
             <artifactId>xunwu-facade</artifactId>
             <version>${xunwu.project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.gwf.xunwu</groupId>
-            <artifactId>xunwu-repository</artifactId>
-            <version>${xunwu.project.version}</version>
-        </dependency>
-        <!-- 七牛依赖 -->
-        <dependency>
-            <groupId>com.qiniu</groupId>
-            <artifactId>qiniu-java-sdk</artifactId>
-            <version>[7.2.0, 7.2.99]</version>
-        </dependency>
+
 
         <!-- ModelMapper Simple, Intelligent, Object Mapping. -->
         <dependency>

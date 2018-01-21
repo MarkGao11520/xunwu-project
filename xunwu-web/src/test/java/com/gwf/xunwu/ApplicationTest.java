@@ -9,6 +9,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Configuration
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 public class ApplicationTest {
 }
