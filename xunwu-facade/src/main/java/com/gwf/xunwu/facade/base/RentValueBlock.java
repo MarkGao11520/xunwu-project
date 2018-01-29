@@ -9,7 +9,7 @@ import lombok.Data;
 /**
  * 带区间的常用数值定义
  * TODO 正常流程应该放在数据库中
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 @AllArgsConstructor
 @Data

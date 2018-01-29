@@ -9,7 +9,8 @@ import org.springframework.security.access.method.P;
 
 
 /**
- * Created by 瓦力.
+ * 用户数据库持久化仓库
+ * @author gaowenfeng
  */
 public interface UserRepository extends CrudRepository<User, Long> {
 

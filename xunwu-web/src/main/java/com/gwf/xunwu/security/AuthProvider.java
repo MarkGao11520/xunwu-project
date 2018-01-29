@@ -11,6 +11,10 @@ import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 
+/**
+ * 自定义权限配置
+ * @author gaowenfeng
+ */
 public class AuthProvider implements AuthenticationProvider {
     @Autowired
     private IUserService userFacade;

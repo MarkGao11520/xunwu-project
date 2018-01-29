@@ -4,7 +4,8 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * Created by 瓦力.
+ * 地铁DTO
+ * @author gaowenfeng
  */
 @Data
 @ToString

@@ -4,7 +4,8 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * Created by 瓦力.
+ * 照片表单
+ * @author gaowenfeng
  */
 @Data
 @ToString

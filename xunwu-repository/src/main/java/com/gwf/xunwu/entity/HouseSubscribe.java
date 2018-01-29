@@ -29,7 +29,9 @@ public class HouseSubscribe {
     @Column(name = "admin_id")
     private Long adminId;
 
-    // 预约状态 1-加入待看清单 2-已预约看房时间 3-看房完成
+    /**
+     * 预约状态 1-加入待看清单 2-已预约看房时间 3-看房完成
+     */
     private int status;
 
     @Column(name = "create_time")

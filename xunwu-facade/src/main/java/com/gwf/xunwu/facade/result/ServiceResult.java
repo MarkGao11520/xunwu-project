@@ -6,6 +6,7 @@ import lombok.ToString;
 /**
  * 服务接口通用结构
  * @param <T>
+ * @author gaowenfneg
  */
 @Data
 @ToString
@@ -45,7 +46,9 @@ public class ServiceResult<T> {
     }
 
     public enum Message {
+        /** 未找到资源 */
         NOT_FOUND("Not Found Resource!"),
+        /** 用户未登录 */
         NOT_LOGIN("User not login!");
 
         private String value;

@@ -17,7 +17,9 @@ public class SupportAddress {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // 上一级行政单位
+    /**
+     * 上一级行政单位
+     */
     @Column(name = "belong_to")
     private String belongTo;
 
@@ -95,7 +97,9 @@ public class SupportAddress {
      * 行政级别定义
      */
     public enum Level {
+        /** 城市 */
         CITY("city"),
+        /** 区域*/
         REGION("region");
 
         private String value;

@@ -7,6 +7,9 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
+/**
+ * @author gaowenfeng
+ */
 @Configuration
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 86400)
 public class RedisSessionConfig {

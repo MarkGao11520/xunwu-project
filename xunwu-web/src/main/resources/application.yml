@@ -18,10 +18,15 @@ spring:
       exclude: templates/**,static/**
   redis:
     database: 0
-    host: markgao.me
+    host: localhost
     pool:
       min-idle: 1
     timeout: 3000
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: xunwu_topic
+
 
 
 security:
@@ -40,9 +45,17 @@ server:
 qiniu:
   AccessKey: W6roYXp9jDFiem-tjgqvoTF3lHIk_YFHhP_8l0_f
   SecretKey: 6gJo1vhBXB9MrtXYVUY0Tz85677TkQ6Qj6yf5Nfe
-  Bucket:
+  Bucket: xunwu-image-repository
   cdn:
-    prefix:
+    prefix: http://p2y1v9py1.bkt.clouddn.com/
+
+es:
+  clusterName: gwf
+  address:
+    - ip: 127.0.0.1
+      port: 9300
+
+
 
 
 

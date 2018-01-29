@@ -12,6 +12,7 @@ import java.util.Map;
 
 /**
  * 基于角色的登录入口控制器
+ * @author gaowenfeng
  */
 public class LoginUrlEntryPoint extends LoginUrlAuthenticationEntryPoint{
     private PathMatcher pathMatcher = new AntPathMatcher();

@@ -4,7 +4,8 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * Created by 瓦力.
+ * 房屋详情数据传输对象
+ * @author gaowenfeng
  */
 @Data
 @ToString
@@ -17,7 +18,7 @@ public class HouseDetailDTO {
 
     private String roundService;
 
-    private int rentWay;
+    private Integer rentWay;
 
     private Long adminId;
 

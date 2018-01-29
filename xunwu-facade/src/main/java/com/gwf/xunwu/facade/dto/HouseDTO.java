@@ -9,7 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by 瓦力.
+ * 房屋数据传输对象
+ * @author gaowenfeng
  */
 @Data
 @ToString
@@ -19,31 +20,31 @@ public class HouseDTO implements Serializable {
 
     private String title;
 
-    private int price;
+    private Integer price;
 
-    private int area;
+    private Integer area;
 
-    private int direction;
+    private Integer direction;
 
-    private int room;
+    private Integer room;
 
-    private int parlour;
+    private Integer parlour;
 
-    private int bathroom;
+    private Integer bathroom;
 
-    private int floor;
+    private Integer floor;
 
     private Long adminId;
 
     private String district;
 
-    private int totalFloor;
+    private Integer totalFloor;
 
-    private int watchTimes;
+    private Integer watchTimes;
 
-    private int buildYear;
+    private Integer buildYear;
 
-    private int status;
+    private Integer status;
 
     private Date createTime;
 
@@ -57,7 +58,7 @@ public class HouseDTO implements Serializable {
 
     private String cover;
 
-    private int distanceToSubway;
+    private Integer distanceToSubway;
 
     private HouseDetailDTO houseDetail;
 
@@ -65,7 +66,7 @@ public class HouseDTO implements Serializable {
 
     private List<HousePictureDTO> pictures;
 
-    private int subscribeStatus;
+    private Integer subscribeStatus;
 
     public List<String> getTags(){
         if(null == tags){

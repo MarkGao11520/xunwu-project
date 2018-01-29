@@ -17,7 +17,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 /**
  * web错误 全局配置
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 @Controller
 public class AppErrorController implements ErrorController {
@@ -48,9 +48,9 @@ public class AppErrorController implements ErrorController {
                 return "404";
             case 500:
                 return "500";
+            default:
+                return "index";
         }
-
-        return "index";
     }
 
     /**

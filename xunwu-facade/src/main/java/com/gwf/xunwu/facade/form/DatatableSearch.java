@@ -6,7 +6,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 /**
- * Created by 瓦力.
+ * 查询参数提
+ * @author gaowenfeng
  */
 @Data
 public class DatatableSearch {

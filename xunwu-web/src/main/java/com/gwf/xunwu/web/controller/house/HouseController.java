@@ -19,6 +19,9 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author gaowenfeng
+ */
 @RestController
 public class HouseController {
 
@@ -173,9 +176,6 @@ public class HouseController {
         ServiceResult<UserDTO> userDTOServiceResult = userService.findById(houseDTO.getAdminId());
         mv.addObject("agent", userDTOServiceResult.getResult());
         mv.addObject("house", houseDTO);
-//
-//        ServiceResult<Long> aggResult = searchService.aggregateDistrictHouse(city.getEnName(), region.getEnName(), houseDTO.getDistrict());
-//        mv.addObject("houseCountInDistrict", aggResult.getResult());
 
         mv.setViewName("house-detail");
         return mv;

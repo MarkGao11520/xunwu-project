@@ -79,6 +79,7 @@ public class User implements UserDetails {
         return this.authorityList;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }

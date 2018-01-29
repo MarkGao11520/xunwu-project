@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
  * 地址服务接口
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 public interface IAddressService {
     /**

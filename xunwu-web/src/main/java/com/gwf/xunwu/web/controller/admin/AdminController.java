@@ -18,6 +18,7 @@ import com.gwf.xunwu.facade.result.ServiceResult;
 import com.gwf.xunwu.web.dto.QiNiuPutRet;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -31,8 +32,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
+/**
+ * 管理员前端控制器
+ * @author gaowenfeng
+ */
 @RestController
+@Slf4j
 public class AdminController {
+
+    private int addressSize = 2;
 
     @Autowired
     private IQiNiuService qiNiuFacade;
@@ -66,7 +74,7 @@ public class AdminController {
             try {
                 return ApiResponse.ofMessage(response.statusCode, response.bodyString());
             } catch (QiniuException e1) {
-                e1.printStackTrace();
+                log.error("七牛云上传失败，位置异常",e);
                 ApiResponse.ofStatus(ApiResponse.Status.INTERNAL_SERVER_ERROR);
             }
         } catch (IOException e) {
@@ -75,6 +83,13 @@ public class AdminController {
 
         return ApiResponse.ofSuccess(null);
     }
+
+    @GetMapping("admin/add/house")
+    public ModelAndView addHouse(ModelAndView mv){
+        mv.setViewName("admin/house-add");
+        return mv;
+    }
+
 
     @PostMapping("admin/add/house")
     public ApiResponse addHouse(@Valid @ModelAttribute("form-house-add") HouseForm houseForm,
@@ -88,7 +103,7 @@ public class AdminController {
         }
 
         Map<SupportAddress.Level, SupportAddressDTO> addressDTOMap = addressService.findCityAndRegion(houseForm.getCityEnName(), houseForm.getRegionEnName());
-        if (2 != addressDTOMap.keySet().size()) {
+        if (addressSize != addressDTOMap.keySet().size()) {
             return ApiResponse.ofStatus(ApiResponse.Status.NOT_VALID_PARAM);
         }
 
@@ -101,7 +116,6 @@ public class AdminController {
     }
 
     @PostMapping("admin/houses")
-    @ResponseBody
     public ApiDataTableResponse houses(@ModelAttribute DatatableSearch searchBody) {
         ServiceMultiResult<HouseDTO> result = houseService.adminQuery(searchBody);
 
@@ -156,7 +170,7 @@ public class AdminController {
 
         Map<SupportAddress.Level, SupportAddressDTO> addressMap = addressService.findCityAndRegion(houseForm.getCityEnName(), houseForm.getRegionEnName());
 
-        if (addressMap.keySet().size() != 2) {
+        if (addressSize!=addressMap.keySet().size()) {
             return ApiResponse.ofSuccess(ApiResponse.Status.NOT_VALID_PARAM);
         }
 
@@ -179,7 +193,6 @@ public class AdminController {
      * @return
      */
     @DeleteMapping("admin/house/photo")
-    @ResponseBody
     public ApiResponse removeHousePhoto(@RequestParam(value = "id") Long id) {
         ServiceResult result = this.houseService.removePhoto(id);
 
@@ -197,7 +210,6 @@ public class AdminController {
      * @return
      */
     @PostMapping("admin/house/cover")
-    @ResponseBody
     public ApiResponse updateCover(@RequestParam(value = "cover_id") Long coverId,
                                    @RequestParam(value = "target_id") Long targetId) {
         ServiceResult result = this.houseService.updateCover(coverId, targetId);
@@ -216,7 +228,6 @@ public class AdminController {
      * @return
      */
     @PostMapping("admin/house/tag")
-    @ResponseBody
     public ApiResponse addHouseTag(@RequestParam(value = "house_id") Long houseId,
                                    @RequestParam(value = "tag") String tag) {
         if (houseId < 1 || Strings.isNullOrEmpty(tag)) {
@@ -238,7 +249,6 @@ public class AdminController {
      * @return
      */
     @DeleteMapping("admin/house/tag")
-    @ResponseBody
     public ApiResponse removeHouseTag(@RequestParam(value = "house_id") Long houseId,
                                       @RequestParam(value = "tag") String tag) {
         if (houseId < 1 || Strings.isNullOrEmpty(tag)) {
@@ -260,7 +270,6 @@ public class AdminController {
      * @return
      */
     @PutMapping("admin/house/operate/{id}/{operation}")
-    @ResponseBody
     public ApiResponse operateHouse(@PathVariable(value = "id") Long id,
                                     @PathVariable(value = "operation") int operation) {
         if (id <= 0) {

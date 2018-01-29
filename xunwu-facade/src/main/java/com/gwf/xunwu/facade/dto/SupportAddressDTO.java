@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * 地址数据传输对象
+ * @author gaowenfeng
+ */
 @Data
 @ToString
 public class SupportAddressDTO {

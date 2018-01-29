@@ -8,7 +8,7 @@ import com.google.common.collect.Sets;
 
 /**
  * 排序生成器
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 public class HouseSort {
     public static final String DEFAULT_SORT_KEY = "lastUpdateTime";

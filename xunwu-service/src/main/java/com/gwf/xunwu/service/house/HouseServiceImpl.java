@@ -15,6 +15,7 @@ import com.gwf.xunwu.facade.service.house.IHouseService;
 import com.gwf.xunwu.facade.service.house.IQiNiuService;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.result.ServiceResult;
+import com.gwf.xunwu.facade.service.search.ISearchService;
 import com.gwf.xunwu.repository.*;
 import com.gwf.xunwu.utils.LoginUserUtil;
 import com.qiniu.common.QiniuException;
@@ -37,6 +38,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * 房屋服务实现
+ * @author gaowenfeng
+ */
 @Service
 public class HouseServiceImpl implements IHouseService{
     @Autowired
@@ -62,11 +67,14 @@ public class HouseServiceImpl implements IHouseService{
     @Autowired
     private IQiNiuService qiNiuService;
 
+    @Autowired
+    private ISearchService searchService;
+
     @Value("${qiniu.cdn.prefix}")
     private String cdnPrefix;
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public ServiceResult<HouseDTO> save(HouseForm houseForm) {
         HouseDetail detail = new HouseDetail();
         // 1.初始化房源详情
@@ -101,8 +109,8 @@ public class HouseServiceImpl implements IHouseService{
         //6.保存标签信息
         List<String> tags = houseForm.getTags();
         if(null != tags || !tags.isEmpty()){
-            List<HouseTag> houseTags = new ArrayList<>();
             final Long id = house.getId();
+            List<HouseTag> houseTags = new ArrayList<>();
             tags.forEach(tag -> houseTags.add(new HouseTag(id,tag)));
             houseTagRepository.save(houseTags);
             houseDTO.setTags(tags);
@@ -112,7 +120,7 @@ public class HouseServiceImpl implements IHouseService{
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public ServiceResult update(HouseForm houseForm) {
         House house = this.houseRepository.findOne(houseForm.getId());
         if (house == null) {
@@ -142,9 +150,9 @@ public class HouseServiceImpl implements IHouseService{
         house.setLastUpdateTime(new Date());
         houseRepository.save(house);
 
-//        if (house.getStatus() == HouseStatus.PASSES.getValue()) {
-//            searchService.index(house.getId());
-//        }
+        if(HouseStatus.PASSES.getValue()==house.getStatus()){
+            searchService.index(house.getId());
+        }
 
         return ServiceResult.success();
     }
@@ -243,7 +251,7 @@ public class HouseServiceImpl implements IHouseService{
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public ServiceResult updateCover(Long coverId, Long targetId) {
         HousePicture cover = housePictureRepository.findOne(coverId);
         if (cover == null) {
@@ -255,7 +263,7 @@ public class HouseServiceImpl implements IHouseService{
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public ServiceResult addTag(Long houseId, String tag) {
         House house = houseRepository.findOne(houseId);
         if (house == null) {
@@ -272,7 +280,7 @@ public class HouseServiceImpl implements IHouseService{
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public ServiceResult removeTag(Long houseId, String tag) {
         House house = houseRepository.findOne(houseId);
         if (house == null) {
@@ -289,7 +297,7 @@ public class HouseServiceImpl implements IHouseService{
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public ServiceResult updateStatus(Long id, int status) {
         House house = houseRepository.findOne(id);
         if (house == null) {
@@ -310,12 +318,12 @@ public class HouseServiceImpl implements IHouseService{
 
         houseRepository.updateStatus(id, status);
 
-//        // 上架更新索引 其他情况都要删除索引
-//        if (status == HouseStatus.PASSES.getValue()) {
-//            searchService.index(id);
-//        } else {
-//            searchService.remove(id);
-//        }
+        if(HouseStatus.PASSES.getValue()==status){
+            searchService.index(house.getId());
+        }else {
+            searchService.remove(house.getId());
+        }
+
         return ServiceResult.success();
     }
 
@@ -331,7 +339,7 @@ public class HouseServiceImpl implements IHouseService{
             predicate = criteriaBuilder.and(predicate,criteriaBuilder.equal(root.get("cityEnName"),rentSearch.getCityEnName()));
 
             if(HouseSort.DISTANCE_TO_SUBWAY_KEY.equals(rentSearch.getOrderBy())){
-                predicate = criteriaBuilder.and(predicate,criteriaBuilder.gt(root.get(HouseSort.DISTANCE_TO_SUBWAY_KEY),-1))
+                predicate = criteriaBuilder.and(predicate,criteriaBuilder.gt(root.get(HouseSort.DISTANCE_TO_SUBWAY_KEY),-1));
             }
             return predicate;
         };
@@ -372,7 +380,7 @@ public class HouseServiceImpl implements IHouseService{
 
     private House buildHouse(HouseForm houseForm) {
         House house = new House();
-        modelMapper.map(houseForm,House.class);
+        modelMapper.map(houseForm,house);
 
         Date now = new Date();
         house.setCreateTime(now);
@@ -404,7 +412,7 @@ public class HouseServiceImpl implements IHouseService{
         }
 
         SubwayStation subwayStation = subwayStationRepository.findOne(houseForm.getSubwayStationId());
-        if(null == subwayStation || subway.getId() != subwayStation.getSubwayId()){
+        if(null == subwayStation || !subway.getId().equals(subwayStation.getSubwayId())){
             return new ServiceResult<>(false,"Not valid subway station!");
         }
 

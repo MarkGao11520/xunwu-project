@@ -15,6 +15,10 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.InputStream;
 
+/**
+ * 七牛服务实现
+ * @author gaowenfeng
+ */
 @Service
 public class QiNiuServiceImpl implements IQiNiuService,InitializingBean{
 
@@ -66,9 +70,10 @@ public class QiNiuServiceImpl implements IQiNiuService,InitializingBean{
     }
 
     private Response qiniuUpload(UploadHandler uploadHandler) throws QiniuException{
+        int maxRetryNum = 3;
         Response response = uploadHandler.handle();
         int retry = 0;
-        while (response.needRetry() && retry<3){
+        while (response.needRetry() && retry<maxRetryNum){
             response = uploadHandler.handle();
             retry ++;
         }
@@ -76,6 +81,11 @@ public class QiNiuServiceImpl implements IQiNiuService,InitializingBean{
     }
 
     interface UploadHandler{
+        /**
+         * 处理七牛文件操作接口，内部使用
+         * @return
+         * @throws QiniuException 可能由于参数或网络等未知因素导致七牛异常
+         */
         Response handle()throws QiniuException;
     }
 }

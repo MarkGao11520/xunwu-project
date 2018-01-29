@@ -2,14 +2,18 @@ package com.gwf.xunwu.facade.base;
 
 /**
  * 房屋操作状态常量定义
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 public interface HouseOperation {
-    public static final int PASS = 1; // 通过审核
+    /** 通过审核 */
+    int PASS = 1;
 
-    public static final int PULL_OUT = 2; // 下架。重新审核
+    /** 下架。重新审核 */
+    int PULL_OUT = 2;
 
-    public static final int DELETE = 3; // 逻辑删除
+    /** 逻辑删除 */
+    int DELETE = 3;
 
-    public static final int RENT = 4; // 出租
+    /** 出租 */
+    int RENT = 4;
 }

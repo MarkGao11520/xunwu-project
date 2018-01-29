@@ -5,7 +5,7 @@ import lombok.ToString;
 
 /**
  * 租房请求参数结构体
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 @Data
 @ToString
@@ -33,9 +33,10 @@ public class RentSearch {
 
 
     public int getSize() {
+        int theThresholdValue = 100;
         if (this.size < 1) {
             return 5;
-        } else if (this.size > 100) {
+        } else if (this.size > theThresholdValue) {
             return 100;
         } else {
             return this.size;
@@ -44,7 +45,9 @@ public class RentSearch {
 
 
     public int getRentWay() {
-        if (rentWay > -2 && rentWay < 2) {
+        int min = -2;
+        int max = 2;
+        if (rentWay > min && rentWay < max) {
             return rentWay;
         } else {
             return -1;

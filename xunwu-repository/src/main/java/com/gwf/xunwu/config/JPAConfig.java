@@ -15,12 +15,12 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * Created by 瓦力.
+ * @author gaowenfneg
  */
 @Configuration
 @EnableJpaRepositories(basePackages = "com.gwf.xunwu.repository")
 @EnableTransactionManagement
-public class JPAConfig {
+public class JpaConfig {
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource dataSource() {

@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * 登录验证失败处理器
+ * @author gaowenfeng
  */
 public class LoginAuthFailHandler extends SimpleUrlAuthenticationFailureHandler{
 

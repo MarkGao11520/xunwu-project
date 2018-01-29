@@ -6,8 +6,12 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
-@AllArgsConstructor
+/**
+ * 统一列表返回对象
+ * @author gaowenfeng
+ */
 @Data
+@AllArgsConstructor
 public class ServiceMultiResult<T> {
     private long total;
     private List<T> result;

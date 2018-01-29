@@ -40,6 +40,10 @@
                     <groupId>nz.net.ultraq.thymeleaf</groupId>
                     <artifactId>thymeleaf-layout-dialect</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
 
@@ -57,11 +61,10 @@
         </dependency>
 
         <!-- SpringSecurity 依赖 -->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-web</artifactId>-->
-        <!--</dependency>-->
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
 
         <!--&lt;!&ndash; Thymeleaf方言支持SpringSecurity 依赖&ndash;&gt;-->
@@ -82,7 +85,7 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-        <!-- SpringBoot自带热加载开发工具 -->
+        <!--&lt;!&ndash; SpringBoot自带热加载开发工具 &ndash;&gt;-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -100,6 +103,16 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

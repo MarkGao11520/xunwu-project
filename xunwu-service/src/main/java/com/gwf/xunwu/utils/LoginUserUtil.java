@@ -3,6 +3,10 @@ package com.gwf.xunwu.utils;
 import com.gwf.xunwu.entity.User;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+/**
+ * 登录用户信息工具类
+ * @author gaowenfeng
+ */
 public class LoginUserUtil {
     public static User load(){
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();

@@ -17,6 +17,7 @@ import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 
 /**
  * ApplicationContextAware 可以提供上下文
+ * @author gaowenfeng
  */
 @Configuration
 public class WebMvcConfig
@@ -39,7 +40,6 @@ public class WebMvcConfig
         registry.addViewController("/index").setViewName("/index");
         registry.addViewController("/admin/center").setViewName("/admin/center");
         registry.addViewController("/admin/welcome").setViewName("/admin/welcome");
-        registry.addViewController("/admin/add/house").setViewName("admin/house-add");
         registry.addViewController("/admin/house/list").setViewName("admin/house-list");
         registry.addViewController("/admin/login").setViewName("/admin/login");
         registry.addViewController("/user/login").setViewName("/user/login");

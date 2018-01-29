@@ -22,6 +22,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * 地区实现类
+ * @author gaowenfeng
+ */
 @Service
 public class AddressServiceImpl implements IAddressService {
     @Autowired
@@ -46,7 +50,7 @@ public class AddressServiceImpl implements IAddressService {
 
     @Override
     public Map<SupportAddress.Level, SupportAddressDTO> findCityAndRegion(String cityEnName, String regionEnName) {
-        Map<SupportAddress.Level, SupportAddressDTO> result = new HashMap<>();
+        Map<SupportAddress.Level, SupportAddressDTO> result = new HashMap<>(2);
 
         SupportAddress city = supportAddressRepository.findByEnNameAndLevel(cityEnName, SupportAddress.Level.CITY
                 .getValue());

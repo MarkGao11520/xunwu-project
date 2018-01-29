@@ -11,7 +11,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * Created by 瓦力.
+ * 房屋表单
+ * @author gaowenfeng
  */
 @Data
 @ToString

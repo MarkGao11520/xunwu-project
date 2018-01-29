@@ -5,7 +5,8 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * Created by 瓦力.
+ * 房屋照片数据传输对象
+ * @author gaowenfeng
  */
 @Data
 @ToString
@@ -20,8 +21,8 @@ public class HousePictureDTO {
     @JsonProperty(value = "cdn_prefix")
     private String cdnPrefix;
 
-    private int width;
+    private Integer width;
 
-    private int height;
+    private Integer height;
 
 }

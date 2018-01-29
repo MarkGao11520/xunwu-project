@@ -18,6 +18,10 @@ import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 用户服务实现类
+ * @author gaowenfeng
+ */
 @Service
 public class UserServiceImpl implements IUserService {
     @Autowired

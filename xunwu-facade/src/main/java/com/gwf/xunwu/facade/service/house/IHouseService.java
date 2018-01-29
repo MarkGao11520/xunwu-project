@@ -7,11 +7,30 @@ import com.gwf.xunwu.facade.form.RentSearch;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.result.ServiceResult;
 
+/**
+ * 房屋服务接口
+ * @author gaowenfeng
+ */
 public interface IHouseService {
+    /**
+     * 保存房屋信息
+     * @param houseForm 表单信息
+     * @return
+     */
     ServiceResult<HouseDTO> save(HouseForm houseForm);
 
+    /**
+     * 更新房屋信息
+     * @param houseForm 表单信息
+     * @return
+     */
     ServiceResult update(HouseForm houseForm);
 
+    /**
+     * 管理员端查询
+     * @param datatableSearch 查询参数
+     * @return
+     */
     ServiceMultiResult<HouseDTO> adminQuery(DatatableSearch datatableSearch);
 
     /**

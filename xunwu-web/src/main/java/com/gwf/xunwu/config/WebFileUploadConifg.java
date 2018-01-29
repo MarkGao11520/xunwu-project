@@ -22,6 +22,10 @@ import org.springframework.web.servlet.DispatcherServlet;
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.Servlet;
 
+/**
+ * 七牛文件上传服务配置
+ * @author gaowenfeng
+ */
 @Configuration
 @ConditionalOnClass({Servlet.class, StandardServletMultipartResolver.class, MultipartConfigElement.class})
 @ConditionalOnProperty(prefix = "spring.http.multipart",name = "enabled",matchIfMissing = true)
@@ -30,11 +34,9 @@ public class WebFileUploadConifg {
     private final MultipartProperties multipartProperties;
 
     @Value("${qiniu.AccessKey}")
-    private String AccessKey;
+    private String accessKey;
     @Value("${qiniu.SecretKey}")
-    private String SecretKey;
-    @Value("${qiniu.Bucket}")
-    private String Bucket;
+    private String secretKey;
     @Value("${qiniu.cdn.prefix}")
     private String prefix;
 
@@ -82,7 +84,7 @@ public class WebFileUploadConifg {
      */
     @Bean
     public Auth auth(){
-        return Auth.create(AccessKey,SecretKey);
+        return Auth.create(accessKey,secretKey);
     }
 
     /**
