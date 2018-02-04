@@ -7,7 +7,7 @@ import com.gwf.xunwu.facade.base.ApiResponse;
 import com.gwf.xunwu.entity.SupportAddress;
 import com.gwf.xunwu.facade.base.HouseOperation;
 import com.gwf.xunwu.facade.base.HouseStatus;
-import com.gwf.xunwu.facade.dto.*;
+import com.gwf.xunwu.facade.bo.*;
 import com.gwf.xunwu.facade.form.DatatableSearch;
 import com.gwf.xunwu.facade.form.HouseForm;
 import com.gwf.xunwu.facade.service.house.IAddressService;
@@ -102,12 +102,12 @@ public class AdminController {
             return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), "必须上传图片");
         }
 
-        Map<SupportAddress.Level, SupportAddressDTO> addressDTOMap = addressService.findCityAndRegion(houseForm.getCityEnName(), houseForm.getRegionEnName());
+        Map<SupportAddress.Level, SupportAddressBO> addressDTOMap = addressService.findCityAndRegion(houseForm.getCityEnName(), houseForm.getRegionEnName());
         if (addressSize != addressDTOMap.keySet().size()) {
             return ApiResponse.ofStatus(ApiResponse.Status.NOT_VALID_PARAM);
         }
 
-        ServiceResult<HouseDTO> result = houseService.save(houseForm);
+        ServiceResult<HouseBO> result = houseService.save(houseForm);
         if (result.isSuccess()) {
             return ApiResponse.ofSuccess(result.getResult());
         }
@@ -117,7 +117,7 @@ public class AdminController {
 
     @PostMapping("admin/houses")
     public ApiDataTableResponse houses(@ModelAttribute DatatableSearch searchBody) {
-        ServiceMultiResult<HouseDTO> result = houseService.adminQuery(searchBody);
+        ServiceMultiResult<HouseBO> result = houseService.adminQuery(searchBody);
 
         ApiDataTableResponse response = new ApiDataTableResponse(ApiResponse.Status.SUCCESS);
         response.setData(result.getResult());
@@ -135,26 +135,26 @@ public class AdminController {
             return modelAndView;
         }
 
-        ServiceResult<HouseDTO> serviceResult = houseService.findCompleteOne(id);
+        ServiceResult<HouseBO> serviceResult = houseService.findCompleteOne(id);
         if (!serviceResult.isSuccess()) {
             modelAndView.setViewName("404");
             return modelAndView;
         }
 
-        HouseDTO result = serviceResult.getResult();
+        HouseBO result = serviceResult.getResult();
         modelAndView.addObject("house", result);
 
-        Map<SupportAddress.Level, SupportAddressDTO> addressMap = addressService.findCityAndRegion(result.getCityEnName(), result.getRegionEnName());
+        Map<SupportAddress.Level, SupportAddressBO> addressMap = addressService.findCityAndRegion(result.getCityEnName(), result.getRegionEnName());
         modelAndView.addObject("city", addressMap.get(SupportAddress.Level.CITY));
         modelAndView.addObject("region", addressMap.get(SupportAddress.Level.REGION));
 
-        HouseDetailDTO detailDTO = result.getHouseDetail();
-        ServiceResult<SubwayDTO> subwayDTOServiceResult = addressService.findSubway(detailDTO.getSubwayLineId());
+        HouseDetailBO detailDTO = result.getHouseDetail();
+        ServiceResult<SubwayBO> subwayDTOServiceResult = addressService.findSubway(detailDTO.getSubwayLineId());
         if (subwayDTOServiceResult.isSuccess()) {
             modelAndView.addObject("subway", subwayDTOServiceResult.getResult());
         }
 
-        ServiceResult<SubwayStationDTO> subwayStationDTOServiceResult = addressService.findSubwayStation(detailDTO.getSubwayStationId());
+        ServiceResult<SubwayStationBO> subwayStationDTOServiceResult = addressService.findSubwayStation(detailDTO.getSubwayStationId());
         if (subwayStationDTOServiceResult.isSuccess()) {
             modelAndView.addObject("station", subwayStationDTOServiceResult.getResult());
         }
@@ -168,7 +168,7 @@ public class AdminController {
             return new ApiResponse(HttpStatus.BAD_REQUEST.value(), bindingResult.getAllErrors().get(0).getDefaultMessage(), null);
         }
 
-        Map<SupportAddress.Level, SupportAddressDTO> addressMap = addressService.findCityAndRegion(houseForm.getCityEnName(), houseForm.getRegionEnName());
+        Map<SupportAddress.Level, SupportAddressBO> addressMap = addressService.findCityAndRegion(houseForm.getCityEnName(), houseForm.getRegionEnName());
 
         if (addressSize!=addressMap.keySet().size()) {
             return ApiResponse.ofSuccess(ApiResponse.Status.NOT_VALID_PARAM);

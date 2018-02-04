@@ -2,7 +2,7 @@ package com.gwf.xunwu.service.user;
 
 import com.gwf.xunwu.entity.Role;
 import com.gwf.xunwu.entity.User;
-import com.gwf.xunwu.facade.dto.UserDTO;
+import com.gwf.xunwu.facade.bo.UserBO;
 import com.gwf.xunwu.facade.result.ServiceResult;
 import com.gwf.xunwu.facade.service.user.IUserService;
 import com.gwf.xunwu.repository.RoleRepository;
@@ -51,12 +51,12 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public ServiceResult<UserDTO> findById(Long userId) {
+    public ServiceResult<UserBO> findById(Long userId) {
         User user = userRepository.findOne(userId);
         if (user == null) {
             return ServiceResult.notFound();
         }
-        UserDTO userDTO = modelMapper.map(user, UserDTO.class);
+        UserBO userDTO = modelMapper.map(user, UserBO.class);
         return ServiceResult.of(userDTO);
     }
 }

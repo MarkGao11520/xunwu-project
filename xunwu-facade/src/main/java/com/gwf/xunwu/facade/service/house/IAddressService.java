@@ -1,9 +1,9 @@
 package com.gwf.xunwu.facade.service.house;
 
 import com.gwf.xunwu.entity.SupportAddress;
-import com.gwf.xunwu.facade.dto.SubwayDTO;
-import com.gwf.xunwu.facade.dto.SubwayStationDTO;
-import com.gwf.xunwu.facade.dto.SupportAddressDTO;
+import com.gwf.xunwu.facade.bo.SubwayBO;
+import com.gwf.xunwu.facade.bo.SubwayStationBO;
+import com.gwf.xunwu.facade.bo.SupportAddressBO;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.result.ServiceResult;
 
@@ -19,7 +19,7 @@ public interface IAddressService {
      * 获取所有支持的城市列表
      * @return
      */
-    ServiceMultiResult<SupportAddressDTO> findAllCities();
+    ServiceMultiResult<SupportAddressBO> findAllCities();
 
     /**
      * 根据英文简写获取具体区域的信息
@@ -27,7 +27,7 @@ public interface IAddressService {
      * @param regionEnName
      * @return
      */
-    Map<SupportAddress.Level, SupportAddressDTO> findCityAndRegion(String cityEnName, String regionEnName);
+    Map<SupportAddress.Level, SupportAddressBO> findCityAndRegion(String cityEnName, String regionEnName);
 
     /**
      * 根据城市英文简写获取该城市所有支持的区域信息
@@ -41,35 +41,35 @@ public interface IAddressService {
      * @param cityEnName
      * @return
      */
-    List<SubwayDTO> findAllSubwayByCity(String cityEnName);
+    List<SubwayBO> findAllSubwayByCity(String cityEnName);
 
     /**
      * 获取地铁线路所有的站点
      * @param subwayId
      * @return
      */
-    List<SubwayStationDTO> findAllStationBySubway(Long subwayId);
+    List<SubwayStationBO> findAllStationBySubway(Long subwayId);
 
     /**
      * 获取地铁线信息
      * @param subwayId
      * @return
      */
-    ServiceResult<SubwayDTO> findSubway(Long subwayId);
+    ServiceResult<SubwayBO> findSubway(Long subwayId);
 
     /**
      * 获取地铁站点信息
      * @param stationId
      * @return
      */
-    ServiceResult<SubwayStationDTO> findSubwayStation(Long stationId);
+    ServiceResult<SubwayStationBO> findSubwayStation(Long stationId);
 
     /**
      * 根据城市英文简写获取城市详细信息
      * @param cityEnName
      * @return
      */
-    ServiceResult<SupportAddressDTO> findCity(String cityEnName);
+    ServiceResult<SupportAddressBO> findCity(String cityEnName);
 
 
 

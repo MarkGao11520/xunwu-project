@@ -47,7 +47,8 @@ qiniu:
   SecretKey: 6gJo1vhBXB9MrtXYVUY0Tz85677TkQ6Qj6yf5Nfe
   Bucket: xunwu-image-repository
   cdn:
-    prefix: http://p2y1v9py1.bkt.clouddn.com/
+    prefix: http://7xo6gy.com1.z0.glb.clouddn.com/
+#    prefix: http://p2y1v9py1.bkt.clouddn.com/
 
 es:
   clusterName: gwf

@@ -10,6 +10,8 @@ import lombok.ToString;
 @Data
 @ToString
 public class RentSearch {
+    public static final String regionAll = "*";
+
     private String cityEnName;
     private String regionEnName;
     private String priceBlock;

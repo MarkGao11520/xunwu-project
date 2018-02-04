@@ -4,9 +4,10 @@ import com.google.common.collect.Maps;
 import com.gwf.xunwu.entity.*;
 import com.gwf.xunwu.facade.base.HouseSort;
 import com.gwf.xunwu.facade.base.HouseStatus;
-import com.gwf.xunwu.facade.dto.HouseDTO;
-import com.gwf.xunwu.facade.dto.HouseDetailDTO;
-import com.gwf.xunwu.facade.dto.HousePictureDTO;
+import com.gwf.xunwu.facade.bo.HouseBO;
+import com.gwf.xunwu.facade.bo.HouseDetailBO;
+import com.gwf.xunwu.facade.bo.HousePictureBO;
+import com.gwf.xunwu.facade.exception.EsException;
 import com.gwf.xunwu.facade.form.DatatableSearch;
 import com.gwf.xunwu.facade.form.HouseForm;
 import com.gwf.xunwu.facade.form.PhotoForm;
@@ -20,6 +21,7 @@ import com.gwf.xunwu.repository.*;
 import com.gwf.xunwu.utils.LoginUserUtil;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,13 +31,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.persistence.criteria.Predicate;
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -43,7 +43,10 @@ import java.util.stream.Collectors;
  * @author gaowenfeng
  */
 @Service
+@Slf4j
 public class HouseServiceImpl implements IHouseService{
+    private static final String LOG_PRE = "房屋信息服务>";
+
     @Autowired
     private HouseRepository houseRepository;
     @Autowired
@@ -75,10 +78,10 @@ public class HouseServiceImpl implements IHouseService{
 
     @Override
     @Transactional(rollbackOn = Exception.class)
-    public ServiceResult<HouseDTO> save(HouseForm houseForm) {
+    public ServiceResult<HouseBO> save(HouseForm houseForm) {
         HouseDetail detail = new HouseDetail();
         // 1.初始化房源详情
-        ServiceResult<HouseDTO> result = wrapperDetailInfo(detail,houseForm);
+        ServiceResult<HouseBO> result = wrapperDetailInfo(detail,houseForm);
         if(null!=result){
             return result;
         }
@@ -96,13 +99,13 @@ public class HouseServiceImpl implements IHouseService{
         Iterable<HousePicture> housePictures = housePictureRepository.save(pictures);
 
         //5.封装返回结果
-        HouseDTO houseDTO = modelMapper.map(house,HouseDTO.class);
-        HouseDetailDTO houseDetailDTO = modelMapper.map(detail,HouseDetailDTO.class);
+        HouseBO houseDTO = modelMapper.map(house,HouseBO.class);
+        HouseDetailBO houseDetailDTO = modelMapper.map(detail,HouseDetailBO.class);
 
         houseDTO.setHouseDetail(houseDetailDTO);
 
-        List<HousePictureDTO> pictureDTOS = new ArrayList<>();
-        housePictures.forEach(housePicture -> pictureDTOS.add(modelMapper.map(housePicture,HousePictureDTO.class)));
+        List<HousePictureBO> pictureDTOS = new ArrayList<>();
+        housePictures.forEach(housePicture -> pictureDTOS.add(modelMapper.map(housePicture,HousePictureBO.class)));
         houseDTO.setPictures(pictureDTOS);
         houseDTO.setCover(this.cdnPrefix+houseDTO.getCover());
 
@@ -158,8 +161,8 @@ public class HouseServiceImpl implements IHouseService{
     }
 
     @Override
-    public ServiceMultiResult<HouseDTO> adminQuery(DatatableSearch datatableSearch) {
-        List<HouseDTO> houseDTOS = new ArrayList<>();
+    public ServiceMultiResult<HouseBO> adminQuery(DatatableSearch datatableSearch) {
+        List<HouseBO> houseDTOS = new ArrayList<>();
 
         Sort sort = new Sort(Sort.Direction.fromString(datatableSearch.getDirection()),datatableSearch.getOrderBy());
         int page = datatableSearch.getStart() / datatableSearch.getLength();
@@ -197,7 +200,7 @@ public class HouseServiceImpl implements IHouseService{
 
         Page<House> houses =  houseRepository.findAll(houseSpecification,pageable);
         houses.forEach(house -> {
-            HouseDTO houseDTO = modelMapper.map(house,HouseDTO.class);
+            HouseBO houseDTO = modelMapper.map(house,HouseBO.class);
             houseDTO.setCover(this.cdnPrefix+house.getCover());
             houseDTOS.add(houseDTO);
         });
@@ -205,7 +208,7 @@ public class HouseServiceImpl implements IHouseService{
     }
 
     @Override
-    public ServiceResult<HouseDTO> findCompleteOne(Long id) {
+    public ServiceResult<HouseBO> findCompleteOne(Long id) {
         House house = houseRepository.findOne(id);
         if(null == house){
             return ServiceResult.notFound();
@@ -214,13 +217,13 @@ public class HouseServiceImpl implements IHouseService{
         HouseDetail detail = houseDetailRepository.findByHouseId(id);
         List<HousePicture> pictures = housePictureRepository.findAllByHouseId(id);
 
-        HouseDetailDTO detailDTO = modelMapper.map(detail,HouseDetailDTO.class);
-        List<HousePictureDTO> pictureDTOS = pictures.stream().map(picture->modelMapper.map(picture,HousePictureDTO.class)).collect(Collectors.toList());
+        HouseDetailBO detailDTO = modelMapper.map(detail,HouseDetailBO.class);
+        List<HousePictureBO> pictureDTOS = pictures.stream().map(picture->modelMapper.map(picture,HousePictureBO.class)).collect(Collectors.toList());
 
         List<HouseTag> tags = houseTagRepository.findAllByHouseId(id);
         List<String> tagList = tags.stream().map(tag->tag.getName()).collect(Collectors.toList());
 
-        HouseDTO result = modelMapper.map(house,HouseDTO.class);
+        HouseBO result = modelMapper.map(house,HouseBO.class);
         result.setHouseDetail(detailDTO);
         result.setPictures(pictureDTOS);
         result.setTags(tagList);
@@ -327,15 +330,55 @@ public class HouseServiceImpl implements IHouseService{
         return ServiceResult.success();
     }
 
+    private List<HouseBO> wrapperHouseResult(List<Long> houseIds){
+        List<HouseBO> result = new ArrayList<>();
+
+        Map<Long,HouseBO> idToHouseMap = new HashMap<>();
+        Iterable<House> houses = houseRepository.findAll(houseIds);
+        houses.forEach(house -> {
+            HouseBO houseDTO = modelMapper.map(house,HouseBO.class);
+            houseDTO.setCover(this.cdnPrefix+house.getCover());
+            idToHouseMap.put(house.getId(),houseDTO);
+        });
+
+        wrapperHouselist(houseIds,idToHouseMap);
+
+        //矫正顺序
+        for(Long houseId:houseIds){
+            result.add(idToHouseMap.get(houseId));
+        }
+        return result;
+    }
+
     @Override
-    public ServiceMultiResult<HouseDTO> query(RentSearch rentSearch) {
+    public ServiceMultiResult<HouseBO> query(RentSearch rentSearch) {
+        if(!StringUtils.isEmpty(rentSearch.getKeywords())){
+            ServiceMultiResult<Long> serviceResult = null;
+            try {
+                serviceResult = searchService.query(rentSearch);
+            } catch (EsException e) {
+                log.error(LOG_PRE+"es查询异常",e);
+                return simpleQuery(rentSearch);
+            }
+            if(0==serviceResult.getTotal()){
+                return new ServiceMultiResult<>(0,new ArrayList<>());
+            }
+
+            return new ServiceMultiResult<>(serviceResult.getTotal(),
+                    wrapperHouseResult(serviceResult.getResult()));
+        }
+
+        return simpleQuery(rentSearch);
+    }
+
+    private ServiceMultiResult<HouseBO> simpleQuery(RentSearch rentSearch) {
         //1.拼接sql
         Sort sort = HouseSort.generateSort(rentSearch.getOrderBy(),rentSearch.getOrderDirection());
         int page = rentSearch.getStart()/rentSearch.getSize();
 
         Pageable pageable = new PageRequest(page,rentSearch.getSize(),sort);
-        Specification<House> houseSpecification = (root,criteriaQuery,criteriaBuilder)->{
-            Predicate predicate = criteriaBuilder.equal(root.get("status"),HouseStatus.PASSES.getValue());
+        Specification<House> houseSpecification = (root, criteriaQuery, criteriaBuilder)->{
+            Predicate predicate = criteriaBuilder.equal(root.get("status"), HouseStatus.PASSES.getValue());
             predicate = criteriaBuilder.and(predicate,criteriaBuilder.equal(root.get("cityEnName"),rentSearch.getCityEnName()));
 
             if(HouseSort.DISTANCE_TO_SUBWAY_KEY.equals(rentSearch.getOrderBy())){
@@ -347,12 +390,12 @@ public class HouseServiceImpl implements IHouseService{
         Page<House> houses = houseRepository.findAll(houseSpecification,pageable);
 
         //2.拼接返回值
-        List<HouseDTO> houseDTOS = new ArrayList<>();
+        List<HouseBO> houseDTOS = new ArrayList<>();
 
         List<Long> houseIds = new ArrayList<>();
-        Map<Long,HouseDTO> idToHouseMap = Maps.newHashMap();
+        Map<Long,HouseBO> idToHouseMap = Maps.newHashMap();
         houses.forEach(house -> {
-            HouseDTO houseDTO = modelMapper.map(house,HouseDTO.class);
+            HouseBO houseDTO = modelMapper.map(house,HouseBO.class);
             houseDTO.setCover(this.cdnPrefix+house.getCover());
             houseDTOS.add(houseDTO);
             houseIds.add(house.getId());
@@ -363,17 +406,17 @@ public class HouseServiceImpl implements IHouseService{
         return new ServiceMultiResult<>(houses.getTotalElements(),houseDTOS);
     }
 
-    private void wrapperHouselist(List<Long> houseIds,Map<Long,HouseDTO> idToHouseMap){
+    private void wrapperHouselist(List<Long> houseIds,Map<Long,HouseBO> idToHouseMap){
         List<HouseDetail> details = houseDetailRepository.findAllByHouseIdIn(houseIds);
         details.forEach(houseDetail -> {
-            HouseDTO houseDTO = idToHouseMap.get(houseDetail.getHouseId());
-            HouseDetailDTO detailDTO = modelMapper.map(houseDetail,HouseDetailDTO.class);
+            HouseBO houseDTO = idToHouseMap.get(houseDetail.getHouseId());
+            HouseDetailBO detailDTO = modelMapper.map(houseDetail,HouseDetailBO.class);
             houseDTO.setHouseDetail(detailDTO);
         });
 
         List<HouseTag> houseTags = houseTagRepository.findAllByHouseIdIn(houseIds);
         houseTags.forEach(tag ->{
-            HouseDTO houseDTO = idToHouseMap.get(tag.getHouseId());
+            HouseBO houseDTO = idToHouseMap.get(tag.getHouseId());
             houseDTO.getTags().add(tag.getName());
         });
     }
@@ -405,7 +448,7 @@ public class HouseServiceImpl implements IHouseService{
         return pictures;
     }
 
-    private ServiceResult<HouseDTO> wrapperDetailInfo(HouseDetail houseDetail,HouseForm houseForm){
+    private ServiceResult<HouseBO> wrapperDetailInfo(HouseDetail houseDetail, HouseForm houseForm){
         Subway subway = subwayRepository.findOne(houseForm.getSubwayLineId());
         if(null == subway){
             return new ServiceResult<>(false,"Not valid subway line!");

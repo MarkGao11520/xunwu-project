@@ -1,6 +1,6 @@
 package com.gwf.xunwu.facade.service.house;
 
-import com.gwf.xunwu.facade.dto.HouseDTO;
+import com.gwf.xunwu.facade.bo.HouseBO;
 import com.gwf.xunwu.facade.form.DatatableSearch;
 import com.gwf.xunwu.facade.form.HouseForm;
 import com.gwf.xunwu.facade.form.RentSearch;
@@ -17,7 +17,7 @@ public interface IHouseService {
      * @param houseForm 表单信息
      * @return
      */
-    ServiceResult<HouseDTO> save(HouseForm houseForm);
+    ServiceResult<HouseBO> save(HouseForm houseForm);
 
     /**
      * 更新房屋信息
@@ -31,14 +31,14 @@ public interface IHouseService {
      * @param datatableSearch 查询参数
      * @return
      */
-    ServiceMultiResult<HouseDTO> adminQuery(DatatableSearch datatableSearch);
+    ServiceMultiResult<HouseBO> adminQuery(DatatableSearch datatableSearch);
 
     /**
      * 查询完整房源信息
      * @param id
      * @return
      */
-    ServiceResult<HouseDTO> findCompleteOne(Long id);
+    ServiceResult<HouseBO> findCompleteOne(Long id);
 
 
     /**
@@ -85,5 +85,5 @@ public interface IHouseService {
      * @param rentSearch
      * @return
      */
-    ServiceMultiResult<HouseDTO> query(RentSearch rentSearch);
+    ServiceMultiResult<HouseBO> query(RentSearch rentSearch);
 }

@@ -1,7 +1,12 @@
 package com.gwf.xunwu.search;
 
 import com.gwf.xunwu.ApplicationTest;
+import com.gwf.xunwu.facade.exception.EsException;
+import com.gwf.xunwu.facade.form.RentSearch;
+import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.search.HouseIndexTemplate;
+import org.junit.Assert;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -22,6 +27,17 @@ public class SearchServiceImplTest extends ApplicationTest{
     @org.junit.Test
     public void remove() {
         searchService.remove(houseId);
+    }
+
+    @Test
+    public void query() throws EsException {
+        RentSearch rentSearch = new RentSearch();
+        rentSearch.setCityEnName("bj");
+        rentSearch.setRegionEnName("*");
+        rentSearch.setSize(0);
+        rentSearch.setSize(10);
+        ServiceMultiResult<Long> serviceMultiResult = searchService.query(rentSearch);
+        Assert.assertEquals(8,serviceMultiResult.getTotal());
     }
 
     @org.junit.Test

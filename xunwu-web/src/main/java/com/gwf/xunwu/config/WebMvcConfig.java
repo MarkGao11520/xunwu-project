@@ -2,6 +2,7 @@ package com.gwf.xunwu.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -24,6 +25,9 @@ public class WebMvcConfig
         extends WebMvcConfigurerAdapter
         implements ApplicationContextAware{
     private ApplicationContext applicationContext;
+
+    @Value("${spring.thymeleaf.cache}")
+    private boolean thymeleafCache;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
@@ -66,6 +70,7 @@ public class WebMvcConfig
         templateResolver.setApplicationContext(applicationContext);
         // 设置语法格式
         templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setCacheable(thymeleafCache);
         return templateResolver;
     }
 

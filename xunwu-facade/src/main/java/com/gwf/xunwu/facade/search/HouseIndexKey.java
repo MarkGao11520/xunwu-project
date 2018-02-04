@@ -30,4 +30,5 @@ public interface HouseIndexKey {
 
     String AGG_DISTRICT = "agg_district";
     String AGG_REGION = "agg_region";
+
 }

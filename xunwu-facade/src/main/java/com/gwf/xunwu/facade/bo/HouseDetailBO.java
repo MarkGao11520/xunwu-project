@@ -1,4 +1,4 @@
-package com.gwf.xunwu.facade.dto;
+package com.gwf.xunwu.facade.bo;
 
 import lombok.Data;
 import lombok.ToString;
@@ -9,7 +9,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class HouseDetailDTO {
+public class HouseDetailBO {
     private String description;
 
     private String layoutDesc;

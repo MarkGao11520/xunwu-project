@@ -3,9 +3,9 @@ package com.gwf.xunwu.service.house;
 import com.gwf.xunwu.entity.Subway;
 import com.gwf.xunwu.entity.SubwayStation;
 import com.gwf.xunwu.entity.SupportAddress;
-import com.gwf.xunwu.facade.dto.SubwayDTO;
-import com.gwf.xunwu.facade.dto.SubwayStationDTO;
-import com.gwf.xunwu.facade.dto.SupportAddressDTO;
+import com.gwf.xunwu.facade.bo.SubwayBO;
+import com.gwf.xunwu.facade.bo.SubwayStationBO;
+import com.gwf.xunwu.facade.bo.SupportAddressBO;
 import com.gwf.xunwu.facade.service.house.IAddressService;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.result.ServiceResult;
@@ -41,68 +41,68 @@ public class AddressServiceImpl implements IAddressService {
     private ModelMapper modelMapper;
 
     @Override
-    public ServiceMultiResult<SupportAddressDTO> findAllCities() {
+    public ServiceMultiResult<SupportAddressBO> findAllCities() {
         List<SupportAddress> addresses = supportAddressRepository.findAllByLevel(SupportAddress.Level.CITY.getValue());
-        List<SupportAddressDTO> addressDTOS = addresses.stream()
-                .map(supportAddress ->  modelMapper.map(supportAddress,SupportAddressDTO.class)).collect(Collectors.toList());
+        List<SupportAddressBO> addressDTOS = addresses.stream()
+                .map(supportAddress ->  modelMapper.map(supportAddress,SupportAddressBO.class)).collect(Collectors.toList());
         return new ServiceMultiResult<>(addressDTOS.size(),addressDTOS);
     }
 
     @Override
-    public Map<SupportAddress.Level, SupportAddressDTO> findCityAndRegion(String cityEnName, String regionEnName) {
-        Map<SupportAddress.Level, SupportAddressDTO> result = new HashMap<>(2);
+    public Map<SupportAddress.Level, SupportAddressBO> findCityAndRegion(String cityEnName, String regionEnName) {
+        Map<SupportAddress.Level, SupportAddressBO> result = new HashMap<>(2);
 
         SupportAddress city = supportAddressRepository.findByEnNameAndLevel(cityEnName, SupportAddress.Level.CITY
                 .getValue());
         SupportAddress region = supportAddressRepository.findByEnNameAndBelongTo(regionEnName, city.getEnName());
 
-        result.put(SupportAddress.Level.CITY, modelMapper.map(city, SupportAddressDTO.class));
-        result.put(SupportAddress.Level.REGION, modelMapper.map(region, SupportAddressDTO.class));
+        result.put(SupportAddress.Level.CITY, modelMapper.map(city, SupportAddressBO.class));
+        result.put(SupportAddress.Level.REGION, modelMapper.map(region, SupportAddressBO.class));
         return result;
     }
 
     @Override
-    public ServiceMultiResult<SupportAddressDTO> findAllRegionsByCityName(String cityName) {
+    public ServiceMultiResult<SupportAddressBO> findAllRegionsByCityName(String cityName) {
         if (cityName == null) {
             return new ServiceMultiResult<>(0, null);
         }
 
-        List<SupportAddressDTO> result = new ArrayList<>();
+        List<SupportAddressBO> result = new ArrayList<>();
 
         List<SupportAddress> regions = supportAddressRepository.findAllByLevelAndBelongTo(SupportAddress.Level.REGION
                 .getValue(), cityName);
         for (SupportAddress region : regions) {
-            result.add(modelMapper.map(region, SupportAddressDTO.class));
+            result.add(modelMapper.map(region, SupportAddressBO.class));
         }
         return new ServiceMultiResult<>(regions.size(), result);
     }
 
     @Override
-    public List<SubwayDTO> findAllSubwayByCity(String cityEnName) {
-        List<SubwayDTO> result = new ArrayList<>();
+    public List<SubwayBO> findAllSubwayByCity(String cityEnName) {
+        List<SubwayBO> result = new ArrayList<>();
         List<Subway> subways = subwayRepository.findAllByCityEnName(cityEnName);
         if (subways.isEmpty()) {
             return result;
         }
 
-        subways.forEach(subway -> result.add(modelMapper.map(subway, SubwayDTO.class)));
+        subways.forEach(subway -> result.add(modelMapper.map(subway, SubwayBO.class)));
         return result;
     }
 
     @Override
-    public List<SubwayStationDTO> findAllStationBySubway(Long subwayId) {
-        List<SubwayStationDTO> result = new ArrayList<>();
+    public List<SubwayStationBO> findAllStationBySubway(Long subwayId) {
+        List<SubwayStationBO> result = new ArrayList<>();
         List<SubwayStation> stations = subwayStationRepository.findAllBySubwayId(subwayId);
         if (stations.isEmpty()) {
             return result;
         }
 
-        stations.forEach(station -> result.add(modelMapper.map(station, SubwayStationDTO.class)));
+        stations.forEach(station -> result.add(modelMapper.map(station, SubwayStationBO.class)));
         return result;
     }
 
     @Override
-    public ServiceResult<SubwayDTO> findSubway(Long subwayId) {
+    public ServiceResult<SubwayBO> findSubway(Long subwayId) {
         if (subwayId == null) {
             return ServiceResult.notFound();
         }
@@ -110,11 +110,11 @@ public class AddressServiceImpl implements IAddressService {
         if (subway == null) {
             return ServiceResult.notFound();
         }
-        return ServiceResult.of(modelMapper.map(subway, SubwayDTO.class));
+        return ServiceResult.of(modelMapper.map(subway, SubwayBO.class));
     }
 
     @Override
-    public ServiceResult<SubwayStationDTO> findSubwayStation(Long stationId) {
+    public ServiceResult<SubwayStationBO> findSubwayStation(Long stationId) {
         if (stationId == null) {
             return ServiceResult.notFound();
         }
@@ -122,11 +122,11 @@ public class AddressServiceImpl implements IAddressService {
         if (station == null) {
             return ServiceResult.notFound();
         }
-        return ServiceResult.of(modelMapper.map(station, SubwayStationDTO.class));
+        return ServiceResult.of(modelMapper.map(station, SubwayStationBO.class));
     }
 
     @Override
-    public ServiceResult<SupportAddressDTO> findCity(String cityEnName) {
+    public ServiceResult<SupportAddressBO> findCity(String cityEnName) {
         if (cityEnName == null) {
             return ServiceResult.notFound();
         }
@@ -136,7 +136,7 @@ public class AddressServiceImpl implements IAddressService {
             return ServiceResult.notFound();
         }
 
-        SupportAddressDTO addressDTO = modelMapper.map(supportAddress, SupportAddressDTO.class);
+        SupportAddressBO addressDTO = modelMapper.map(supportAddress, SupportAddressBO.class);
         return ServiceResult.of(addressDTO);
     }
 }
