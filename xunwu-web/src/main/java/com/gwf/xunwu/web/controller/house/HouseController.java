@@ -3,9 +3,10 @@ package com.gwf.xunwu.web.controller.house;
 import com.gwf.xunwu.entity.SupportAddress;
 import com.gwf.xunwu.facade.base.ApiResponse;
 import com.gwf.xunwu.facade.base.RentValueBlock;
-import com.gwf.xunwu.facade.bo.*;
+import com.gwf.xunwu.facade.dto.*;
+import com.gwf.xunwu.facade.form.MapSearch;
 import com.gwf.xunwu.facade.form.RentSearch;
-import com.gwf.xunwu.facade.search.HouseBucketDTO;
+import com.gwf.xunwu.facade.search.HouseBucketBO;
 import com.gwf.xunwu.facade.service.house.IAddressService;
 import com.gwf.xunwu.facade.service.house.IHouseService;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
@@ -13,6 +14,8 @@ import com.gwf.xunwu.facade.result.ServiceResult;
 import com.gwf.xunwu.facade.service.search.ISearchService;
 import com.gwf.xunwu.facade.service.user.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -59,7 +62,7 @@ public class HouseController {
      */
     @GetMapping("address/support/cities")
     public ApiResponse getSupportCities() {
-        ServiceMultiResult<SupportAddressBO> result = addressService.findAllCities();
+        ServiceMultiResult<SupportAddressDTO> result = addressService.findAllCities();
         if (result.getResultSize() == 0) {
             return ApiResponse.ofStatus(ApiResponse.Status.NOT_FOUND);
         }
@@ -73,7 +76,7 @@ public class HouseController {
      */
     @GetMapping("address/support/regions")
     public ApiResponse getSupportRegions(@RequestParam(name = "city_name") String cityEnName) {
-        ServiceMultiResult<SupportAddressBO> addressResult = addressService.findAllRegionsByCityName(cityEnName);
+        ServiceMultiResult<SupportAddressDTO> addressResult = addressService.findAllRegionsByCityName(cityEnName);
         if (addressResult.getResult() == null || addressResult.getTotal() < 1) {
             return ApiResponse.ofStatus(ApiResponse.Status.NOT_FOUND);
         }
@@ -87,7 +90,7 @@ public class HouseController {
      */
     @GetMapping("address/support/subway/line")
     public ApiResponse getSupportSubwayLine(@RequestParam(name = "city_name") String cityEnName) {
-        List<SubwayBO> subways = addressService.findAllSubwayByCity(cityEnName);
+        List<SubwayDTO> subways = addressService.findAllSubwayByCity(cityEnName);
         if (subways.isEmpty()) {
             return ApiResponse.ofStatus(ApiResponse.Status.NOT_FOUND);
         }
@@ -102,7 +105,7 @@ public class HouseController {
      */
     @GetMapping("address/support/subway/station")
     public ApiResponse getSupportSubwayStation(@RequestParam(name = "subway_id") Long subwayId) {
-        List<SubwayStationBO> stationDTOS = addressService.findAllStationBySubway(subwayId);
+        List<SubwayStationDTO> stationDTOS = addressService.findAllStationBySubway(subwayId);
         if (stationDTOS.isEmpty()) {
             return ApiResponse.ofStatus(ApiResponse.Status.NOT_FOUND);
         }
@@ -128,7 +131,7 @@ public class HouseController {
             session.setAttribute("cityEnName",rentSearch.getCityEnName());
         }
 
-        ServiceResult<SupportAddressBO> city =  addressService.findCity(rentSearch.getCityEnName());
+        ServiceResult<SupportAddressDTO> city =  addressService.findCity(rentSearch.getCityEnName());
         if(!city.isSuccess()){
             redirectAttributes.addAttribute("msg","must_chose_city");
             mv.setViewName("redirect:/index");
@@ -138,7 +141,7 @@ public class HouseController {
         mv.addObject("currentCity",city.getResult());
 
         //2.查找区域信息
-        ServiceMultiResult<SupportAddressBO> addressResult = addressService.findAllRegionsByCityName(rentSearch.getCityEnName());
+        ServiceMultiResult<SupportAddressDTO> addressResult = addressService.findAllRegionsByCityName(rentSearch.getCityEnName());
 
         if(null==addressResult.getResult() || 1>addressResult.getTotal()){
             redirectAttributes.addAttribute("msg","must_chose_city");
@@ -151,7 +154,7 @@ public class HouseController {
         }
 
         //3.查询以及构造返回结果集
-        ServiceMultiResult<HouseBO> result = houseService.query(rentSearch);
+        ServiceMultiResult<HouseDTO> result = houseService.query(rentSearch);
         mv.addObject("total",result.getTotal());
         mv.addObject("houses",result.getResult());
 
@@ -176,23 +179,23 @@ public class HouseController {
             return mv;
         }
 
-        ServiceResult<HouseBO> serviceResult = houseService.findCompleteOne(houseId);
+        ServiceResult<HouseDTO> serviceResult = houseService.findCompleteOne(houseId);
         if (!serviceResult.isSuccess()) {
             mv.setViewName("404");
             return mv;
         }
 
-        HouseBO houseDTO = serviceResult.getResult();
-        Map<SupportAddress.Level, SupportAddressBO>
+        HouseDTO houseDTO = serviceResult.getResult();
+        Map<SupportAddress.Level, SupportAddressDTO>
                 addressMap = addressService.findCityAndRegion(houseDTO.getCityEnName(), houseDTO.getRegionEnName());
 
-        SupportAddressBO city = addressMap.get(SupportAddress.Level.CITY);
-        SupportAddressBO region = addressMap.get(SupportAddress.Level.REGION);
+        SupportAddressDTO city = addressMap.get(SupportAddress.Level.CITY);
+        SupportAddressDTO region = addressMap.get(SupportAddress.Level.REGION);
 
         mv.addObject("city", city);
         mv.addObject("region", region);
 
-        ServiceResult<UserBO> userDTOServiceResult = userService.findById(houseDTO.getAdminId());
+        ServiceResult<UserDTO> userDTOServiceResult = userService.findById(houseDTO.getAdminId());
         mv.addObject("agent", userDTOServiceResult.getResult());
         mv.addObject("house", houseDTO);
 
@@ -208,7 +211,7 @@ public class HouseController {
                                      ModelAndView mv,
                                      RedirectAttributes redirectAttributes,
                                      HttpSession session){
-        ServiceResult<SupportAddressBO> city = addressService.findCity(cityEnName);
+        ServiceResult<SupportAddressDTO> city = addressService.findCity(cityEnName);
         if(!city.isSuccess()){
             redirectAttributes.addAttribute("msg","must_chose_city");
             mv.setViewName("index");
@@ -218,13 +221,33 @@ public class HouseController {
             mv.addObject("city",city.getResult());
         }
 
-        ServiceMultiResult<SupportAddressBO> regions = addressService.findAllRegionsByCityName(cityEnName);
-        ServiceMultiResult<HouseBucketDTO> buckets = searchService.mapAggregate(cityEnName);
+        ServiceMultiResult<SupportAddressDTO> regions = addressService.findAllRegionsByCityName(cityEnName);
+        ServiceMultiResult<HouseBucketBO> buckets = searchService.mapAggregate(cityEnName);
 
         mv.addObject("aggData",buckets.getResult());
         mv.addObject("total",buckets.getTotal());
-        mv.addObject("regions",regions);
+        mv.addObject("regions",regions.getResult());
         mv.setViewName("rent-map");
         return mv;
+    }
+
+    @GetMapping("/rent/house/map/houses")
+    public ApiResponse rentMapHouses(@ModelAttribute MapSearch mapSearch){
+        if(ObjectUtils.isEmpty(mapSearch.getCityEnName())){
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(),"必须选择城市");
+        }
+
+        ServiceMultiResult<HouseDTO> serviceMultiResult;
+        if(mapSearch.getLevel()<MapSearch.PRECISE_QUERY_LEVEL){
+            serviceMultiResult = houseService.wholeMapQuery(mapSearch);
+        }else {
+            serviceMultiResult = houseService.boundMapQuery(mapSearch);
+        }
+
+        ApiResponse apiResponse = ApiResponse.ofSuccess(serviceMultiResult.getResult());
+        apiResponse.setMore(
+                serviceMultiResult.getTotal()>mapSearch.getStart()+mapSearch.getSize()
+        );
+        return apiResponse;
     }
 }

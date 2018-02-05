@@ -1,4 +1,4 @@
-package com.gwf.xunwu.facade.bo;
+package com.gwf.xunwu.facade.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -10,7 +10,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class HousePictureBO {
+public class HousePictureDTO {
     private Long id;
 
     @JsonProperty(value = "house_id")

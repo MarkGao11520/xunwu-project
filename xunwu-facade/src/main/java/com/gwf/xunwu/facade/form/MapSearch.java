@@ -10,6 +10,8 @@ import lombok.ToString;
 @Data
 @ToString
 public class MapSearch {
+    public static int PRECISE_QUERY_LEVEL = 13;
+
     private String cityEnName;
 
     /**

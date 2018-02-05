@@ -27,6 +27,7 @@ public interface HouseIndexKey {
     String SUBWAY_LINE_NAME = "subwayLineName";
     String SUBWAY_STATION_NAME = "subwayStationName";
     String TAGS = "tags";
+    String LOCATION = "location";
 
     String AGG_DISTRICT = "agg_district";
     String AGG_REGION = "agg_region";

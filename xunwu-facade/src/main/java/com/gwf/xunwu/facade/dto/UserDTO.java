@@ -1,4 +1,4 @@
-package com.gwf.xunwu.facade.bo;
+package com.gwf.xunwu.facade.dto;
 
 import lombok.Data;
 import lombok.ToString;
@@ -9,7 +9,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class UserBO {
+public class UserDTO {
     private Long id;
     private String name;
     private String avatar;

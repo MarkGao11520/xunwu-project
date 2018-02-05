@@ -1,4 +1,4 @@
-package com.gwf.xunwu.facade.bo;
+package com.gwf.xunwu.facade.dto;
 
 import lombok.Data;
 import lombok.ToString;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Data
 @ToString
-public class HouseBO implements Serializable {
+public class HouseDTO implements Serializable {
     private static final long serialVersionUID = 8918735582286008182L;
     private Long id;
 
@@ -60,11 +60,11 @@ public class HouseBO implements Serializable {
 
     private Integer distanceToSubway;
 
-    private HouseDetailBO houseDetail;
+    private HouseDetailDTO houseDetail;
 
     private List<String> tags;
 
-    private List<HousePictureBO> pictures;
+    private List<HousePictureDTO> pictures;
 
     private Integer subscribeStatus;
 

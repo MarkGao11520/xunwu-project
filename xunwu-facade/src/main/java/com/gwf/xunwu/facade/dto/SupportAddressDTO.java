@@ -1,4 +1,4 @@
-package com.gwf.xunwu.facade.bo;
+package com.gwf.xunwu.facade.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -10,7 +10,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class SupportAddressBO {
+public class SupportAddressDTO {
     private Long id;
     @JsonProperty(value = "belong_to")
     private String belongTo;
@@ -22,4 +22,8 @@ public class SupportAddressBO {
     private String cnName;
 
     private String level;
+
+    private Double baiduMapLongitude;
+
+    private Double baiduMapLatitude;
 }

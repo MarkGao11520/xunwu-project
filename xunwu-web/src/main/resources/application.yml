@@ -56,6 +56,18 @@ es:
     - ip: 127.0.0.1
       port: 9300
 
+baidu:
+  map:
+    serverKey: 6QtSF673D1pYl3eQkEXfwp8ZgsQpB77U
+    geoConvApi: http://api.map.baidu.com/geocoder/v2/?
+  lbs:
+    create: http://api.map.baidu.com/geodata/v3/poi/create
+    query: http://api.map.baidu.com/geodata/v3/poi/list?
+    update: http://api.map.baidu.com/geodata/v3/poi/update
+    delete: http://api.map.baidu.com/geodata/v3/poi/delete
+    tableId: 175730
+
+
 
 
 

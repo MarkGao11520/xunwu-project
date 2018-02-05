@@ -1,10 +1,12 @@
 package com.gwf.xunwu.facade.service.search;
 
 import com.gwf.xunwu.facade.exception.EsException;
+import com.gwf.xunwu.facade.form.MapSearch;
 import com.gwf.xunwu.facade.form.RentSearch;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.result.ServiceResult;
-import com.gwf.xunwu.facade.search.HouseBucketDTO;
+import com.gwf.xunwu.facade.search.BaiduMapLocation;
+import com.gwf.xunwu.facade.search.HouseBucketBO;
 
 import java.util.List;
 
@@ -56,7 +58,23 @@ public interface ISearchService {
      * @param cityEnName
      * @return
      */
-    ServiceMultiResult<HouseBucketDTO> mapAggregate(String cityEnName);
+    ServiceMultiResult<HouseBucketBO> mapAggregate(String cityEnName);
 
+    /**
+     * 城市级别查询
+     * @param cityEnName
+     * @param orderBy
+     * @param orderDirection
+     * @param start
+     * @param size
+     * @return
+     */
+    ServiceMultiResult<Long> mapQuery(String cityEnName,String orderBy,String orderDirection,int start,int size);
 
+    /**
+     * 精确范围查询
+     * @param mapSearch
+     * @return
+     */
+    ServiceMultiResult<Long> mapQuery(MapSearch mapSearch);
 }

@@ -1,4 +1,4 @@
-package com.gwf.xunwu.facade.bo;
+package com.gwf.xunwu.facade.dto;
 
 import lombok.Data;
 import lombok.ToString;
@@ -9,7 +9,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class SubwayStationBO {
+public class SubwayStationDTO {
     private Long id;
     private Long subwayId;
     private String name;

@@ -1,8 +1,9 @@
 package com.gwf.xunwu.facade.service.house;
 
-import com.gwf.xunwu.facade.bo.HouseBO;
+import com.gwf.xunwu.facade.dto.HouseDTO;
 import com.gwf.xunwu.facade.form.DatatableSearch;
 import com.gwf.xunwu.facade.form.HouseForm;
+import com.gwf.xunwu.facade.form.MapSearch;
 import com.gwf.xunwu.facade.form.RentSearch;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.result.ServiceResult;
@@ -17,7 +18,7 @@ public interface IHouseService {
      * @param houseForm 表单信息
      * @return
      */
-    ServiceResult<HouseBO> save(HouseForm houseForm);
+    ServiceResult<HouseDTO> save(HouseForm houseForm);
 
     /**
      * 更新房屋信息
@@ -31,14 +32,14 @@ public interface IHouseService {
      * @param datatableSearch 查询参数
      * @return
      */
-    ServiceMultiResult<HouseBO> adminQuery(DatatableSearch datatableSearch);
+    ServiceMultiResult<HouseDTO> adminQuery(DatatableSearch datatableSearch);
 
     /**
      * 查询完整房源信息
      * @param id
      * @return
      */
-    ServiceResult<HouseBO> findCompleteOne(Long id);
+    ServiceResult<HouseDTO> findCompleteOne(Long id);
 
 
     /**
@@ -85,5 +86,19 @@ public interface IHouseService {
      * @param rentSearch
      * @return
      */
-    ServiceMultiResult<HouseBO> query(RentSearch rentSearch);
+    ServiceMultiResult<HouseDTO> query(RentSearch rentSearch);
+
+    /**
+     * 全地图查询
+     * @param mapSearch
+     * @return
+     */
+    ServiceMultiResult<HouseDTO> wholeMapQuery(MapSearch mapSearch);
+
+    /**
+     * 精确范围查询
+     * @param mapSearch
+     * @return
+     */
+    ServiceMultiResult<HouseDTO> boundMapQuery(MapSearch mapSearch);
 }

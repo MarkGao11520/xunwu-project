@@ -1,5 +1,7 @@
 package com.gwf.xunwu.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,10 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 @Entity
 @Table(name = "support_address")
+@Data
 public class SupportAddress {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,62 +39,6 @@ public class SupportAddress {
 
     @Column(name = "baidu_map_lat")
     private double baiduMapLatitude;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getBelongTo() {
-        return belongTo;
-    }
-
-    public void setBelongTo(String belongTo) {
-        this.belongTo = belongTo;
-    }
-
-    public String getEnName() {
-        return enName;
-    }
-
-    public void setEnName(String enName) {
-        this.enName = enName;
-    }
-
-    public String getCnName() {
-        return cnName;
-    }
-
-    public void setCnName(String cnName) {
-        this.cnName = cnName;
-    }
-
-    public String getLevel() {
-        return level;
-    }
-
-    public void setLevel(String level) {
-        this.level = level;
-    }
-
-    public double getBaiduMapLongitude() {
-        return baiduMapLongitude;
-    }
-
-    public void setBaiduMapLongitude(double baiduMapLongitude) {
-        this.baiduMapLongitude = baiduMapLongitude;
-    }
-
-    public double getBaiduMapLatitude() {
-        return baiduMapLatitude;
-    }
-
-    public void setBaiduMapLatitude(double baiduMapLatitude) {
-        this.baiduMapLatitude = baiduMapLatitude;
-    }
 
     /**
      * 行政级别定义

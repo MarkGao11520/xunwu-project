@@ -11,7 +11,7 @@ import lombok.ToString;
 @Data
 @ToString
 @AllArgsConstructor
-public class HouseBucketDTO {
+public class HouseBucketBO {
     /**
      * 聚合bucket的key
      */

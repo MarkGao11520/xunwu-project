@@ -1,7 +1,7 @@
 package com.gwf.xunwu.facade.service.user;
 
 import com.gwf.xunwu.entity.User;
-import com.gwf.xunwu.facade.bo.UserBO;
+import com.gwf.xunwu.facade.dto.UserDTO;
 import com.gwf.xunwu.facade.result.ServiceResult;
 
 /**
@@ -20,5 +20,5 @@ public interface IUserService {
      * @param userId
      * @return
      */
-    ServiceResult<UserBO> findById(Long userId);
+    ServiceResult<UserDTO> findById(Long userId);
 }
