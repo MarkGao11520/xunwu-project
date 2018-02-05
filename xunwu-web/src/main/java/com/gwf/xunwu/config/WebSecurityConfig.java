@@ -1,5 +1,6 @@
 package com.gwf.xunwu.config;
 
+import com.gwf.xunwu.security.AuthFilter;
 import com.gwf.xunwu.security.AuthProvider;
 import com.gwf.xunwu.security.LoginAuthFailHandler;
 import com.gwf.xunwu.security.LoginUrlEntryPoint;
@@ -21,6 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableGlobalMethodSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+
     /**
      * HTTP权限控制
      * @param http
@@ -28,6 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.addFilterBefore(authFilter(), UsernamePasswordAuthenticationFilter.class);
 
         http.authorizeRequests()
                 /** 管理员登录入口 */
@@ -82,23 +85,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public LoginAuthFailHandler authFailHandler() {
         return new LoginAuthFailHandler(urlEntryPoint());
     }
-//
-//    @Bean
-//    public AuthenticationManager authenticationManager() {
-//        AuthenticationManager authenticationManager = null;
-//        try {
-//            authenticationManager =  super.authenticationManager();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return authenticationManager;
-//    }
-//
-//    @Bean
-//    public AuthFilter authFilter() {
-//        AuthFilter authFilter = new AuthFilter();
-//        authFilter.setAuthenticationManager(authenticationManager());
-//        authFilter.setAuthenticationFailureHandler(authFailHandler());
-//        return authFilter;
-//    }
+
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManager() {
+        AuthenticationManager authenticationManager = null;
+        try {
+            authenticationManager =  super.authenticationManager();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return authenticationManager;
+    }
+
+    @Bean
+    public AuthFilter authFilter() {
+        AuthFilter authFilter = new AuthFilter();
+        authFilter.setAuthenticationManager(authenticationManager());
+        authFilter.setAuthenticationFailureHandler(authFailHandler());
+        return authFilter;
+    }
 }

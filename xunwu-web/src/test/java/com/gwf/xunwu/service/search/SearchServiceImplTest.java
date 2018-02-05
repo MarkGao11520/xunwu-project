@@ -1,4 +1,4 @@
-package com.gwf.xunwu.search;
+package com.gwf.xunwu.service.search;
 
 import com.gwf.xunwu.ApplicationTest;
 import com.gwf.xunwu.facade.exception.EsException;

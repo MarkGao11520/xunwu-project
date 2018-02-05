@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="xunwu-facade" />
         <module name="xunwu-repository" />
-        <module name="xunwu-security-browser" />
         <module name="xunwu-security-core" />
         <module name="xunwu-service" />
         <module name="xunwu-web" />

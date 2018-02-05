@@ -6,37 +6,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="f54ab5f7-59ca-48c2-9a2f-c3f34422c1c5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/BaiduLbsDTO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/BaiduMapLocation.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-web/src/test/java/com/gwf/xunwu/house/AddressServiceImplTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/base/HouseSubscribeStatus.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/HouseSubscribeDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/user/ISmsService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-service/lib/aliyun-java-sdk-core-3.2.3.jar" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-service/lib/aliyun-java-sdk-dysmsapi-1.0.0.jar" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/user/SmsServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/AuthFilter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/task/EsMonitor.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/user/UserController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/db/settings.json" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/HouseBO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/HouseDetailBO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/HousePictureDTO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/SubwayBO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/SubwayStationDTO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/SupportAddressBO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/UserDTO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/form/MapSearch.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/form/MapSearch.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseBucketDTO.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseBucketBO.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexKey.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexKey.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexTemplate.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexTemplate.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IAddressService.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IAddressService.java" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IHouseService.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IHouseService.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java" />
       <change beforePath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/user/IUserService.java" afterPath="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/user/IUserService.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/entity/SupportAddress.java" afterPath="$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/entity/SupportAddress.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/AddressServiceImpl.java" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/AddressServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/xunwu-service/pom.xml" afterPath="$PROJECT_DIR$/xunwu-service/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/search/SearchServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/HouseServiceImpl.java" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/HouseServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/user/UserServiceImpl.java" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/user/UserServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/utils/LoginUserUtil.java" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/utils/LoginUserUtil.java" />
+      <change beforePath="$PROJECT_DIR$/xunwu-service/xunwu-service.iml" afterPath="$PROJECT_DIR$/xunwu-service/xunwu-service.iml" />
+      <change beforePath="$PROJECT_DIR$/xunwu-web/pom.xml" afterPath="$PROJECT_DIR$/xunwu-web/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java" />
+      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebSecurityConfig.java" />
+      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/LoginUrlEntryPoint.java" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/LoginUrlEntryPoint.java" />
       <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/admin/AdminController.java" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/admin/AdminController.java" />
       <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java" />
       <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/application.yml" />
       <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_with_suggest_mapping.json" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_with_suggest_mapping.json" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js.bk" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js.bk" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/rent-map.html" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/rent-map.html" />
+      <change beforePath="$PROJECT_DIR$/xunwu-web/src/test/java/com/gwf/xunwu/search/SearchServiceImplTest.java" afterPath="$PROJECT_DIR$/xunwu-web/src/test/java/com/gwf/xunwu/service/search/SearchServiceImplTest.java" />
+      <change beforePath="$PROJECT_DIR$/xunwu-web/xunwu-web.iml" afterPath="$PROJECT_DIR$/xunwu-web/xunwu-web.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,95 +60,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java">
+      <file leaf-file-name="HouseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="645" column="0" lean-forward="false" selection-start-line="645" selection-start-column="0" selection-end-line="645" selection-end-column="0" />
+            <state relative-caret-position="-1293">
+              <caret line="186" column="76" lean-forward="false" selection-start-line="186" selection-start-column="61" selection-end-line="186" selection-end-column="76" />
+              <folding>
+                <element signature="docComment;class#HouseController#0" expanded="false" />
+                <element signature="docComment;method#autoComplete#0;class#HouseController#0" expanded="false" />
+                <element signature="e#1593#1631#0" expanded="false" />
+                <element signature="method#autoComplete#0;class#HouseController#0" expanded="false" />
+                <element signature="docComment;method#getSupportCities#0;class#HouseController#0" expanded="false" />
+                <element signature="method#getSupportCities#0;class#HouseController#0" expanded="false" />
+                <element signature="docComment;method#getSupportRegions#0;class#HouseController#0" expanded="false" />
+                <element signature="method#getSupportRegions#0;class#HouseController#0" expanded="false" />
+                <element signature="docComment;method#getSupportSubwayLine#0;class#HouseController#0" expanded="false" />
+                <element signature="method#getSupportSubwayLine#0;class#HouseController#0" expanded="false" />
+                <element signature="docComment;method#getSupportSubwayStation#0;class#HouseController#0" expanded="false" />
+                <element signature="method#getSupportSubwayStation#0;class#HouseController#0" expanded="false" />
+                <element signature="method#rentHousePage#0;class#HouseController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginUserUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/utils/LoginUserUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+              <folding>
+                <element signature="e#1363#1364#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1582#1583#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/user/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-343">
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="e#3323#3331#0" expanded="false" />
-                <element signature="e#5270#5271#0" expanded="true" />
-                <element signature="e#5308#5309#0" expanded="true" />
-                <element signature="method#suggest#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="e#18240#18241#0" expanded="true" />
-                <element signature="e#18309#18310#0" expanded="true" />
-                <element signature="docComment;method#create#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="docComment;method#update#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="docComment;method#deleteAndCreate#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="docComment;method#getDeleted#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="method#getDeleted#0;class#SearchServiceImpl#0" expanded="false" />
-                <marker date="1517757141549" expanded="false" signature="4255:4291" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="House.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/entity/House.java">
+      <file leaf-file-name="HouseServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/HouseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="97" column="15" lean-forward="false" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+            <state relative-caret-position="838">
+              <caret line="668" column="29" lean-forward="true" selection-start-line="668" selection-start-column="29" selection-end-line="668" selection-end-column="29" />
               <folding>
-                <element signature="e#1769#1770#0" expanded="true" />
-                <element signature="e#1797#1798#0" expanded="true" />
+                <element signature="docComment;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#1716#1724#0" expanded="false" />
+                <element signature="e#2569#2578#0" expanded="false" />
+                <element signature="method#save#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#4278#4287#0" expanded="false" />
+                <element signature="method#update#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="method#adminQuery#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#5942#7132#0" expanded="false" />
+                <element signature="e#7244#7436#0" expanded="false" />
+                <element signature="method#removePhoto#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#9533#9542#0" expanded="false" />
+                <element signature="method#updateCover#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#9930#9939#0" expanded="false" />
+                <element signature="method#addTag#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#10482#10491#0" expanded="false" />
+                <element signature="method#removeTag#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#11029#11038#0" expanded="false" />
+                <element signature="method#updateStatus#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#12309#12518#0" expanded="false" />
+                <element signature="method#query#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="method#wholeMapQuery#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="method#simpleQuery#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#18349#18890#0" expanded="false" />
+                <element signature="e#19183#19470#0" expanded="false" />
+                <element signature="method#wrapperHouselist#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="e#19890#20130#0" expanded="false" />
+                <element signature="e#20244#20380#0" expanded="false" />
+                <element signature="method#buildHouse#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="method#generatePictures#0;class#HouseServiceImpl#0" expanded="false" />
+                <element signature="method#wrapperDetailInfo#0;class#HouseServiceImpl#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaiduLbsDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/BaiduLbsDTO.java">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/admin/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddressServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/AddressServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="245" column="55" lean-forward="false" selection-start-line="245" selection-start-column="45" selection-end-line="245" selection-end-column="55" />
-              <folding>
-                <element signature="docComment;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="e#1898#1906#0" expanded="false" />
-                <element signature="docComment;field#lbsCreateApi#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findAllCities#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findCityAndRegion#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findAllRegionsByCityName#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findAllSubwayByCity#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findAllStationBySubway#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findSubway#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findSubwayStation#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="method#findCity#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="class#HttpOperate#0;class#AddressServiceImpl#0" expanded="false" />
-                <element signature="docComment;method#prepareRequest#0;class#HttpOperate#0;class#AddressServiceImpl#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicNameValuePair.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar!/org/apache/http/message/BasicNameValuePair.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rent-map.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/templates/rent-map.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="90" column="86" lean-forward="true" selection-start-line="90" selection-start-column="86" selection-end-line="90" selection-end-column="86" />
+            <state relative-caret-position="214">
+              <caret line="344" column="0" lean-forward="true" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -155,80 +165,51 @@
       <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="19" />
+            <state relative-caret-position="186">
+              <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rent-map.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js">
+      <file leaf-file-name="LoginUrlEntryPoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/LoginUrlEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1141">
-              <caret line="174" column="31" lean-forward="false" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="31" />
+            <state relative-caret-position="360">
+              <caret line="73" column="61" lean-forward="false" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="house_index_with_suggest_mapping.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_with_suggest_mapping.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="16" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="108" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/db/settings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EsMonitor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/task/EsMonitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="910">
+              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
-                <element signature="e#0#29#0" expanded="false" />
-                <element signature="n#!!doc;n#load#0" expanded="false" />
-                <element signature="e#797#863#0" expanded="false" />
-                <element signature="n#!!doc;n#drawRegion#0" expanded="false" />
-                <element signature="e#1562#1637#0" expanded="false" />
-                <element signature="e#1860#1986#0" expanded="false" />
-                <element signature="e#2016#2442#0" expanded="false" />
-                <element signature="e#2454#2489#0" expanded="false" />
-                <element signature="e#2668#3592#0" expanded="false" />
-                <element signature="e#2670#2676#0" expanded="false" />
-                <element signature="e#2772#3581#0" expanded="false" />
-                <element signature="e#2853#2939#0" expanded="false" />
-                <element signature="e#2981#3567#0" expanded="false" />
-                <element signature="e#3134#3352#0" expanded="false" />
-                <element signature="e#3675#3746#0" expanded="false" />
-                <element signature="e#3813#3885#0" expanded="false" />
-                <element signature="e#3949#4098#0" expanded="false" />
-                <element signature="n#!!block;n#boundaryShowAndHide#0" expanded="false" />
-                <element signature="e#6396#6517#0" expanded="false" />
-                <element signature="e#6416#6461#0" expanded="false" />
-                <element signature="e#6466#6511#0" expanded="false" />
-                <element signature="n#!!doc;n#loadHouseData#0" expanded="false" />
-                <element signature="e#6766#10420#0" expanded="false" />
-                <element signature="e#6889#10412#0" expanded="false" />
-                <element signature="e#7012#10402#0" expanded="false" />
-                <element signature="e#7014#7035#0" expanded="false" />
-                <element signature="e#7372#10386#0" expanded="false" />
-                <element signature="e#7420#7504#0" expanded="false" />
-                <element signature="e#7510#10180#0" expanded="false" />
-                <element signature="e#7585#10152#0" expanded="false" />
-                <element signature="e#7666#8516#0" expanded="false" />
-                <element signature="e#8642#8795#0" expanded="false" />
-                <element signature="e#10206#10241#0" expanded="false" />
-                <element signature="e#10914#10955#0" expanded="false" />
-                <element signature="e#11150#11360#0" expanded="false" />
-                <marker date="1517758828796" expanded="true" signature="1675:1712" ph="..." />
-                <marker date="1517758828796" expanded="true" signature="1765:1785" ph="..." />
-                <marker date="1517758828796" expanded="true" signature="4727:4768" ph="..." />
-                <marker date="1517758828796" expanded="true" signature="9334:9340" ph="&amp;nbsp;" />
-                <marker date="1517758828796" expanded="true" signature="9340:9346" ph="&amp;nbsp;" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISearchService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CloseableHttpClient.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar!/org/apache/http/impl/client/CloseableHttpClient.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="60" column="55" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="55" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -291,22 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/form/HouseForm.java" />
-        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/HousePictureDTO.java" />
-        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/HouseDTO.java" />
-        <option value="$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/entity/User.java" />
-        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/SubwayDTO.java" />
-        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/AppErrorController.java" />
-        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/admin/AdminController.java" />
-        <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/search/SearchServiceImpl.java" />
-        <option value="$PROJECT_DIR$/xunwu-service/src/test/java/com/gwf/xunwu/service/search/SearchServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/xunwu-service/src/test/java/com/gwf/xunwu/search/SearchServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/template/HouseIndexTemplate.java" />
-        <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_mapping.json" />
-        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexMessage.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/xunwu-service/pom.xml" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/form/RentSearch.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/exception/EsException.java" />
         <option value="$PROJECT_DIR$/xunwu-web/src/test/java/com/gwf/xunwu/search/SearchServiceImplTest.java" />
@@ -316,7 +281,6 @@
         <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/logback-spring.xml" />
         <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/Application.java" />
-        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseBucketDTO.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/HouseDetailDTO.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/HouseDetailBO.java" />
@@ -324,24 +288,41 @@
         <option value="$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/entity/SupportAddress.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/SupportAddressBO.java" />
         <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js.bk" />
-        <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_with_suggest_mapping.json" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/BaiduMapLocation.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexTemplate.java" />
         <option value="$PROJECT_DIR$/xunwu-service/src/test/java/com/gwf/xunwu/service/house/AddressServiceImplTest.java" />
         <option value="$PROJECT_DIR$/xunwu-web/src/test/java/com/gwf/xunwu/house/AddressServiceImplTest.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/form/MapSearch.java" />
-        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java" />
-        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IHouseService.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java" />
-        <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/HouseServiceImpl.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexKey.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/BaiduLbsDTO.java" />
         <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IAddressService.java" />
         <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/AddressServiceImpl.java" />
         <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java" />
-        <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js" />
         <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/rent-map.html" />
+        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/user/ISmsService.java" />
+        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/user/IUserService.java" />
+        <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/user/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/utils/LoginUserUtil.java" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/AuthFilter.java" />
+        <option value="$PROJECT_DIR$/xunwu-web/pom.xml" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/xunwu-security-core/pom.xml" />
+        <option value="$PROJECT_DIR$/xunwu-service/pom.xml" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java" />
+        <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/user/SmsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/user/UserController.java" />
+        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IHouseService.java" />
+        <option value="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/base/HouseSubscribeStatus.java" />
+        <option value="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/HouseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/admin/AdminController.java" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/LoginUrlEntryPoint.java" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_with_suggest_mapping.json" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/db/settings.json" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/task/EsMonitor.java" />
       </list>
     </option>
   </component>
@@ -490,11 +471,77 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="facade" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-facade" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="facade" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-repository" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
               <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -533,6 +580,16 @@
               <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -542,31 +599,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
               <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -588,7 +630,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="SearchEverywhereHistoryKey" value="Search&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java&#10;IA&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IAddressService.java&#10;S&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java&#10;ISear&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;rent&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/resources/static/js/rent-map.js&#10;rent-map&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/resources/templates/rent-map.html&#10;HouseC&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;IADD&#9;PSI&#9;JAVA://com.gwf.xunwu.facade.service.house.IAddressService&#10;Supp&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/SupportAddressBO.java&#10;HouseCo&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;ise&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;ISea&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;HouseContr&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;HouseCont&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;IService&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;SearchService&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java&#10;HouseIndexM&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexMessage.java&#10;LayoutDialect&#9;PSI&#9;JAVA://nz.net.ultraq.thymeleaf.LayoutDialect" />
+    <property name="SearchEverywhereHistoryKey" value="IHouse&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IHouseService.java&#10;Search&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java&#10;IA&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IAddressService.java&#10;S&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java&#10;ISear&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;rent&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/resources/static/js/rent-map.js&#10;rent-map&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/resources/templates/rent-map.html&#10;HouseC&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;IADD&#9;PSI&#9;JAVA://com.gwf.xunwu.facade.service.house.IAddressService&#10;Supp&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/bo/SupportAddressBO.java&#10;HouseCo&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;ise&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;ISea&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;HouseContr&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;HouseCont&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java&#10;IService&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/search/ISearchService.java&#10;SearchService&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java&#10;HouseIndexM&#9;FILE&#9;file:///Users/gaowenfeng/Documents/IDE/newsell/xunwu-project/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexMessage.java&#10;LayoutDialect&#9;PSI&#9;JAVA://nz.net.ultraq.thymeleaf.LayoutDialect" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -601,6 +643,7 @@
       <recent name="com.gwf.xunwu.service.search" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.gwf.xunwu.service" />
       <recent name="com.gwf.xunwu" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -613,11 +656,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/xunwu-web/src/main/resources/db" />
-      <recent name="$PROJECT_DIR$/xunwu-web/src/main/resources" />
-      <recent name="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto" />
       <recent name="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/base" />
-      <recent name="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade" />
+      <recent name="$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto" />
+      <recent name="$PROJECT_DIR$/xunwu-service" />
+      <recent name="$PROJECT_DIR$/xunwu-security-core/src/main/java" />
+      <recent name="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -681,15 +724,15 @@
     <configuration name="SearchServiceImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gwf.xunwu.search.*" />
+          <option name="PATTERN" value="com.gwf.xunwu.service.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="xunwu-web" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gwf.xunwu.search" />
-      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.search.SearchServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.gwf.xunwu.service.search" />
+      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.service.search.SearchServiceImplTest" />
       <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -706,15 +749,15 @@
     <configuration name="SearchServiceImplTest.index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gwf.xunwu.search.*" />
+          <option name="PATTERN" value="com.gwf.xunwu.service.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="xunwu-web" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gwf.xunwu.search" />
-      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.search.SearchServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.gwf.xunwu.service.search" />
+      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.service.search.SearchServiceImplTest" />
       <option name="METHOD_NAME" value="index" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -731,15 +774,15 @@
     <configuration name="SearchServiceImplTest.query" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gwf.xunwu.search.*" />
+          <option name="PATTERN" value="com.gwf.xunwu.service.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="xunwu-web" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gwf.xunwu.search" />
-      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.search.SearchServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.gwf.xunwu.service.search" />
+      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.service.search.SearchServiceImplTest" />
       <option name="METHOD_NAME" value="query" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -756,15 +799,15 @@
     <configuration name="SearchServiceImplTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gwf.xunwu.search.*" />
+          <option name="PATTERN" value="com.gwf.xunwu.service.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="xunwu-web" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gwf.xunwu.search" />
-      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.search.SearchServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.gwf.xunwu.service.search" />
+      <option name="MAIN_CLASS_NAME" value="com.gwf.xunwu.service.search.SearchServiceImplTest" />
       <option name="METHOD_NAME" value="remove" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -920,7 +963,7 @@
       <workItem from="1517152615727" duration="12035000" />
       <workItem from="1517289105503" duration="10380000" />
       <workItem from="1517401515135" duration="1383000" />
-      <workItem from="1517650208248" duration="28001000" />
+      <workItem from="1517650208248" duration="38326000" />
     </task>
     <servers />
   </component>
@@ -957,10 +1000,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121658000" />
+    <option name="totallyTimeSpent" value="131983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37562189" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
@@ -971,7 +1015,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37562189" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37562189" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32587063" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1040,200 +1084,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="94" />
+      <option name="time" value="104" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/4.3.11.RELEASE/spring-messaging-4.3.11.RELEASE.jar!/org/springframework/messaging/handler/invocation/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/1.1.6.RELEASE/spring-kafka-1.1.6.RELEASE.jar!/org/springframework/kafka/listener/adapter/MessagingMessageListenerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/templates/house-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="87" column="56" lean-forward="false" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseSuggest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/HouseDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="58" column="24" lean-forward="false" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/application-test.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/templates/rent-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4541">
-          <caret line="239" column="61" lean-forward="false" selection-start-line="239" selection-start-column="61" selection-end-line="239" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.5.7.RELEASE/spring-boot-1.5.7.RELEASE.jar!/org/springframework/boot/CommandLineRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <marker date="1511174759906" expanded="false" signature="0:104" ph="/.../" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="72" column="54" lean-forward="true" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/logback-spring.xml.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/5.6.1/elasticsearch-5.6.1.jar!/org/elasticsearch/search/aggregations/support/ValuesSourceAggregationBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="125" column="18" lean-forward="false" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/5.6.1/elasticsearch-5.6.1.jar!/org/elasticsearch/search/aggregations/AggregationBuilders.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="153" column="42" lean-forward="false" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseBucketBO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="471" column="16" lean-forward="false" selection-start-line="471" selection-start-column="16" selection-end-line="471" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/dto/QiNiuPutRet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/HouseDetailDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/entity/SupportAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/dto/SupportAddressDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/search/HouseIndexTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xunwu-service/src/test/java/com/gwf/xunwu/service/house/AddressServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_with_suggest_mapping.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="89" column="16" lean-forward="false" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1253,7 +1112,7 @@
         <state relative-caret-position="359">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1292,10 +1151,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding>
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1312,79 +1168,6 @@
         <state relative-caret-position="200">
           <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="243" column="54" lean-forward="true" selection-start-line="243" selection-start-column="54" selection-end-line="243" selection-end-column="54" />
-          <folding>
-            <element signature="docComment;class#HouseController#0" expanded="false" />
-            <element signature="docComment;method#autoComplete#0;class#HouseController#0" expanded="false" />
-            <element signature="e#1445#1483#0" expanded="false" />
-            <element signature="method#autoComplete#0;class#HouseController#0" expanded="false" />
-            <element signature="docComment;method#getSupportCities#0;class#HouseController#0" expanded="false" />
-            <element signature="method#getSupportCities#0;class#HouseController#0" expanded="false" />
-            <element signature="docComment;method#getSupportRegions#0;class#HouseController#0" expanded="false" />
-            <element signature="method#getSupportRegions#0;class#HouseController#0" expanded="false" />
-            <element signature="docComment;method#getSupportSubwayLine#0;class#HouseController#0" expanded="false" />
-            <element signature="method#getSupportSubwayLine#0;class#HouseController#0" expanded="false" />
-            <element signature="docComment;method#getSupportSubwayStation#0;class#HouseController#0" expanded="false" />
-            <element signature="method#getSupportSubwayStation#0;class#HouseController#0" expanded="false" />
-            <element signature="method#rentHousePage#0;class#HouseController#0" expanded="false" />
-            <element signature="method#show#0;class#HouseController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IHouseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="102" column="43" lean-forward="false" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/HouseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1099">
-          <caret line="523" column="27" lean-forward="true" selection-start-line="523" selection-start-column="27" selection-end-line="523" selection-end-column="27" />
-          <folding>
-            <element signature="docComment;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#1567#1575#0" expanded="false" />
-            <element signature="e#2344#2353#0" expanded="false" />
-            <element signature="method#save#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#4053#4062#0" expanded="false" />
-            <element signature="method#update#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#adminQuery#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#5717#6907#0" expanded="false" />
-            <element signature="e#7019#7211#0" expanded="false" />
-            <element signature="method#findCompleteOne#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#removePhoto#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#8993#9002#0" expanded="false" />
-            <element signature="method#updateCover#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#9390#9399#0" expanded="false" />
-            <element signature="method#addTag#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#9942#9951#0" expanded="false" />
-            <element signature="method#removeTag#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#10489#10498#0" expanded="false" />
-            <element signature="method#updateStatus#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#11769#11978#0" expanded="false" />
-            <element signature="method#query#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#wholeMapQuery#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#boundMapQuery#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#simpleQuery#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#14009#14550#0" expanded="false" />
-            <element signature="e#14843#15130#0" expanded="false" />
-            <element signature="method#wrapperHouselist#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="e#15550#15790#0" expanded="false" />
-            <element signature="e#15904#16040#0" expanded="false" />
-            <element signature="method#buildHouse#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#generatePictures#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#wrapperDetailInfo#0;class#HouseServiceImpl#0" expanded="false" />
-            <element signature="method#handleServiceMultiResult#0;class#HouseServiceImpl#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1408,10 +1191,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,8 +1232,8 @@
         <state relative-caret-position="159">
           <caret line="97" column="15" lean-forward="false" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
           <folding>
-            <element signature="e#1769#1770#0" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1769#1770#0" expanded="false" />
+            <element signature="e#1797#1798#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1471,39 +1251,8 @@
         <state relative-caret-position="306">
           <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/search/SearchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="645" column="0" lean-forward="false" selection-start-line="645" selection-start-column="0" selection-end-line="645" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#3323#3331#0" expanded="false" />
-            <element signature="e#5270#5271#0" expanded="true" />
-            <element signature="e#5308#5309#0" expanded="true" />
-            <element signature="method#suggest#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#18240#18241#0" expanded="true" />
-            <element signature="e#18309#18310#0" expanded="true" />
-            <element signature="docComment;method#create#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="docComment;method#update#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="docComment;method#deleteAndCreate#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="docComment;method#getDeleted#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getDeleted#0;class#SearchServiceImpl#0" expanded="false" />
-            <marker date="1517757141549" expanded="false" signature="4255:4291" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,21 +1282,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1507472687000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1507472687000" expanded="false" signature="147:376" ph="..." />
+            <marker date="1507472687000" expanded="true" signature="378:434" ph="@{...}" />
+            <marker date="1507472687000" expanded="true" signature="712:803" ph="{...}" />
+            <marker date="1507472687000" expanded="false" signature="832:843" ph=" { " />
+            <marker date="1507472687000" expanded="false" signature="860:866" ph=" }" />
+            <marker date="1507472687000" expanded="false" signature="896:907" ph=" { " />
+            <marker date="1507472687000" expanded="false" signature="925:931" ph=" }" />
+            <marker date="1507472687000" expanded="true" signature="962:1334" ph="{...}" />
+            <marker date="1507472687000" expanded="true" signature="1377:1707" ph="{...}" />
+            <marker date="1507472687000" expanded="true" signature="1735:1895" ph="{...}" />
+            <marker date="1507472687000" expanded="true" signature="1957:1994" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/templates/rent-map.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
-          <caret line="90" column="86" lean-forward="true" selection-start-line="90" selection-start-column="86" selection-end-line="90" selection-end-column="86" />
+          <caret line="90" column="86" lean-forward="false" selection-start-line="90" selection-start-column="86" selection-end-line="90" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/static/js/rent-map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1141">
+        <state relative-caret-position="-839">
           <caret line="174" column="31" lean-forward="false" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="31" />
           <folding>
             <element signature="e#0#29#0" expanded="false" />
@@ -1588,8 +1350,298 @@
             <marker date="1517758828796" expanded="true" signature="1675:1712" ph="..." />
             <marker date="1517758828796" expanded="true" signature="1765:1785" ph="..." />
             <marker date="1517758828796" expanded="true" signature="4727:4768" ph="..." />
-            <marker date="1517758828796" expanded="true" signature="9334:9340" ph="&amp;nbsp;" />
-            <marker date="1517758828796" expanded="true" signature="9340:9346" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/user/ISmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-security/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-security-browser/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-security-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-security-core/src/main/java/core/authentication/AbstractChannelSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="78" column="41" lean-forward="false" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/user/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="44" column="66" lean-forward="false" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/search/SearchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1661">
+          <caret line="475" column="17" lean-forward="false" selection-start-line="475" selection-start-column="17" selection-end-line="475" selection-end-column="17" />
+          <folding>
+            <element signature="docComment;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="e#3331#3339#0" expanded="false" />
+            <element signature="method#suggest#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="docComment;method#create#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="docComment;method#update#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="docComment;method#deleteAndCreate#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="docComment;method#getDeleted#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="method#getDeleted#0;class#SearchServiceImpl#0" expanded="false" />
+            <marker date="1517807380949" expanded="false" signature="4263:4299" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="102" column="13" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/AuthFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/user/SmsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="84" column="27" lean-forward="false" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-repository/src/main/java/com/gwf/xunwu/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/base/HouseSubscribeStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-facade/src/main/java/com/gwf/xunwu/facade/service/house/IHouseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="47" column="74" lean-forward="true" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/house/HouseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1293">
+          <caret line="186" column="76" lean-forward="false" selection-start-line="186" selection-start-column="61" selection-end-line="186" selection-end-column="76" />
+          <folding>
+            <element signature="docComment;class#HouseController#0" expanded="false" />
+            <element signature="docComment;method#autoComplete#0;class#HouseController#0" expanded="false" />
+            <element signature="e#1593#1631#0" expanded="false" />
+            <element signature="method#autoComplete#0;class#HouseController#0" expanded="false" />
+            <element signature="docComment;method#getSupportCities#0;class#HouseController#0" expanded="false" />
+            <element signature="method#getSupportCities#0;class#HouseController#0" expanded="false" />
+            <element signature="docComment;method#getSupportRegions#0;class#HouseController#0" expanded="false" />
+            <element signature="method#getSupportRegions#0;class#HouseController#0" expanded="false" />
+            <element signature="docComment;method#getSupportSubwayLine#0;class#HouseController#0" expanded="false" />
+            <element signature="method#getSupportSubwayLine#0;class#HouseController#0" expanded="false" />
+            <element signature="docComment;method#getSupportSubwayStation#0;class#HouseController#0" expanded="false" />
+            <element signature="method#getSupportSubwayStation#0;class#HouseController#0" expanded="false" />
+            <element signature="method#rentHousePage#0;class#HouseController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/utils/LoginUserUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding>
+            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/house/HouseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="668" column="29" lean-forward="true" selection-start-line="668" selection-start-column="29" selection-end-line="668" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#1716#1724#0" expanded="false" />
+            <element signature="e#2569#2578#0" expanded="false" />
+            <element signature="method#save#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#4278#4287#0" expanded="false" />
+            <element signature="method#update#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="method#adminQuery#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#5942#7132#0" expanded="false" />
+            <element signature="e#7244#7436#0" expanded="false" />
+            <element signature="method#removePhoto#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#9533#9542#0" expanded="false" />
+            <element signature="method#updateCover#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#9930#9939#0" expanded="false" />
+            <element signature="method#addTag#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#10482#10491#0" expanded="false" />
+            <element signature="method#removeTag#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#11029#11038#0" expanded="false" />
+            <element signature="method#updateStatus#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#12309#12518#0" expanded="false" />
+            <element signature="method#query#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="method#wholeMapQuery#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="method#simpleQuery#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#18349#18890#0" expanded="false" />
+            <element signature="e#19183#19470#0" expanded="false" />
+            <element signature="method#wrapperHouselist#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="e#19890#20130#0" expanded="false" />
+            <element signature="e#20244#20380#0" expanded="false" />
+            <element signature="method#buildHouse#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="method#generatePictures#0;class#HouseServiceImpl#0" expanded="false" />
+            <element signature="method#wrapperDetailInfo#0;class#HouseServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/db/settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/web/controller/admin/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="344" column="0" lean-forward="true" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/db/house_index_with_suggest_mapping.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="108" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/security/LoginUrlEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="73" column="61" lean-forward="false" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/task/EsMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

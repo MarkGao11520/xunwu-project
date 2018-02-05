@@ -12,7 +12,9 @@ import com.gwf.xunwu.facade.service.house.IHouseService;
 import com.gwf.xunwu.facade.result.ServiceMultiResult;
 import com.gwf.xunwu.facade.result.ServiceResult;
 import com.gwf.xunwu.facade.service.search.ISearchService;
+import com.gwf.xunwu.facade.service.user.ISmsService;
 import com.gwf.xunwu.facade.service.user.IUserService;
+import com.gwf.xunwu.utils.LoginUserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.ObjectUtils;
@@ -41,6 +43,9 @@ public class HouseController {
 
     @Autowired
     private ISearchService searchService;
+
+    @Autowired
+    private ISmsService smsService;
 
     /**
      * 自动补全接口
@@ -249,5 +254,19 @@ public class HouseController {
                 serviceMultiResult.getTotal()>mapSearch.getStart()+mapSearch.getSize()
         );
         return apiResponse;
+    }
+
+    @GetMapping(value = "sms/code")
+    public ApiResponse smsCode(@RequestParam("telephone") String telephone) {
+        if (!LoginUserUtil.checkTelephone(telephone)) {
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), "请输入正确的手机号");
+        }
+        ServiceResult<String> result = smsService.sendSms(telephone);
+        if (result.isSuccess()) {
+            return ApiResponse.ofSuccess("");
+        } else {
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), result.getMessage());
+        }
+
     }
 }

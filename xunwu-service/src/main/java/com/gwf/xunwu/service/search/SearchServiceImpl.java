@@ -1,4 +1,4 @@
-package com.gwf.xunwu.search;
+package com.gwf.xunwu.service.search;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

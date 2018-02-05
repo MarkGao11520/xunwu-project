@@ -1,10 +1,24 @@
 {
   "settings": {
-    "number_of_replicas": 0
+    // 副本数
+    "number_of_replicas": 0,
+    // 分片数
+    "number_of_shards": 5,
+    // 存储类型
+    "index.store.type": "niofs",
+    // 默认查询字段
+    "index.query.default_field": "title",
+    // 节点掉线延迟时间
+    "index.unassigned.node_left.delayed_timeout": "5m"
   },
   "mappings": {
     "house": {
-      "dynamic": false,
+      // 非动态引擎
+      "dynamic": "strict",
+      // 不是对所有字段都查询索引
+      "_all":{
+        "enabled": false
+      },
       "properties": {
         "houseId": {
           "type": "long"
