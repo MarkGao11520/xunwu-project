@@ -28,7 +28,7 @@
                         <i class="icon" data-bl="switch"></i>
                         <div data-bl="switch" class="check">关键词</div>
                         <div class="txt-search">
-                            <input class="left txt" name="keyword" autocomplete="off"
+                            <input class="left txt" name="keywords" autocomplete="off"
                                    placeholder="如小区名、地铁站等" id="keyword-box"
                                     th:value="${searchBody.keywords != null} ? ${searchBody.keywords} : ''"/>
                         </div>
@@ -245,7 +245,7 @@
                                 </div>
                                 <div class="col-1">
                                     <div class="where">
-                                        <a th:href="@{/rent/house(cityEnName=${searchBody.cityEnName}, search=${house.district})}"
+                                        <a th:href="@{/rent/house(cityEnName=${searchBody.cityEnName}, keywords=${house.district})}"
                                            class="laisuzhou">
                                             <span class="region" th:text="${house.district} + '&nbsp;&nbsp;'"></span>
                                         </a>

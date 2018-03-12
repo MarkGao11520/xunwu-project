@@ -235,6 +235,8 @@ public class HouseServiceImpl implements IHouseService{
             HouseSubscribe houseSubscribe = subscribeRespository.findByHouseIdAndUserId(house.getId(),LoginUserUtil.getLoginUserId());
             if(null!=houseSubscribe){
                 result.setSubscribeStatus(houseSubscribe.getStatus());
+            }else {
+                result.setSubscribeStatus(HouseSubscribeStatus.NO_SUBSCRIBE.getValue());
             }
         }
 

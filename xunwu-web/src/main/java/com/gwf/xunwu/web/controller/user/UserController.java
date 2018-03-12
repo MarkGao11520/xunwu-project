@@ -106,7 +106,7 @@ public class UserController {
 
     @DeleteMapping(value = "api/user/house/subscribe")
     @ResponseBody
-    public ApiResponse cancelSubscribe(@RequestParam(value = "houseId") Long houseId) {
+    public ApiResponse cancelSubscribe(@RequestParam(value = "house_id") Long houseId) {
         ServiceResult serviceResult = houseService.cancelSubscribe(houseId);
         if (serviceResult.isSuccess()) {
             return ApiResponse.ofStatus(ApiResponse.Status.SUCCESS);

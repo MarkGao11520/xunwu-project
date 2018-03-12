@@ -22,13 +22,13 @@
     <div class="wrapper">
         <div class="fl" log-mod="search">
             <div class="search-txt">
-                <form class="clear" id="searchForm" action="#" th:action="@{/rent/house}" method="post">
-                    <div class="search-tab"><i class="icon" data-bl="switch"></i>
+                <form class="clear" id="searchForm" action="/rent/house" method="get">
+                    <div class="search-tab">
+                        <i class="icon" data-bl="switch"></i>
                         <div data-bl="switch" class="check">关键词</div>
-
                         <div class="txt-search">
-                            <input class="left txt" name="keyword" autocomplete="off"
-                                   placeholder="如小区名、地铁站、房屋朝向等" id="keyword-box">
+                            <input class="left txt" name="keywords" autocomplete="off"
+                                   placeholder="如小区名、地铁站等" id="keyword-box"/>
                         </div>
                     </div>
                     <button type="submit" class="act-search btn home-ico ico-search LOGCLICKEVTID">
@@ -36,8 +36,7 @@
                     </button>
                 </form>
             </div>
-        </div>
-        <div class="fr last">
+        </div>        <div class="fr last">
             <div class="ditu fr">
                 <a th:href="@{/rent/house/map(cityEnName=${city.enName})}" target="_blank">
                     <i></i>

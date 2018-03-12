@@ -3,7 +3,7 @@ package com.gwf.xunwu.facade.base;
 
 /**
  * 预约状态码
- * Created by 瓦力.
+ * @author gaowenfeng
  */
 public enum HouseSubscribeStatus {
     // 未预约

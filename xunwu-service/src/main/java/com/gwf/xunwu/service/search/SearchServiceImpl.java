@@ -207,6 +207,7 @@ public class SearchServiceImpl implements ISearchService{
                 );
             }
 
+            // TODO 关键词搜索的时候，加上其他条件，关键词几乎不起作用了，需要修改
             boolQuery.should(QueryBuilders.matchQuery(HouseIndexKey.TITLE,search.getKeywords()).boost(2.0f))
                     ;
 
