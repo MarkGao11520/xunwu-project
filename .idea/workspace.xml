@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa763ad1-7bfb-4dfc-8821-5057717dba99" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/build.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build_online.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/xunwu.sql" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/xunwu-service/pom.xml" afterPath="$PROJECT_DIR$/xunwu-service/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/search/SearchServiceImpl.java" afterPath="$PROJECT_DIR$/xunwu-service/src/main/java/com/gwf/xunwu/service/search/SearchServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-service/xunwu-service.iml" afterPath="$PROJECT_DIR$/xunwu-service/xunwu-service.iml" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/pom.xml" afterPath="$PROJECT_DIR$/xunwu-web/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java" afterPath="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/admin/common.html" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/admin/common.html" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/common.html" afterPath="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/common.html" />
-      <change beforePath="$PROJECT_DIR$/xunwu-web/xunwu-web.iml" afterPath="$PROJECT_DIR$/xunwu-web/xunwu-web.iml" />
+      <change beforePath="$PROJECT_DIR$/build_online.sh" afterPath="$PROJECT_DIR$/build_online.sh" />
+      <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="$PROJECT_DIR$/xunwu-service/target/" />
     <ignored path="$PROJECT_DIR$/xunwu-web/target/" />
@@ -61,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -91,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build_online.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build_online.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build_online.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="2" column="107" lean-forward="false" selection-start-line="2" selection-start-column="107" selection-end-line="2" selection-end-column="107" />
+              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -157,9 +145,9 @@
         <option value="$PROJECT_DIR$/xunwu-web/src/main/java/com/gwf/xunwu/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/admin/common.html" />
         <option value="$PROJECT_DIR$/xunwu-web/src/main/resources/templates/common.html" />
-        <option value="$PROJECT_DIR$/build_online.sh" />
         <option value="$PROJECT_DIR$/require.txt" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/build_online.sh" />
       </list>
     </option>
   </component>
@@ -206,37 +194,7 @@
             <path>
               <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xunwu-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xunwu-project" type="462c0819:PsiDirectoryNode" />
-              <item name="xunwu-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="xunwu-service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -383,12 +341,12 @@
       <updated>1520829085196</updated>
       <workItem from="1520829087944" duration="579000" />
       <workItem from="1520829721900" duration="12416000" />
-      <workItem from="1520846629041" duration="980000" />
+      <workItem from="1520846629041" duration="1083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13975000" />
+    <option name="totallyTimeSpent" value="14078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -408,7 +366,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -792,14 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build_online.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="107" lean-forward="false" selection-start-line="2" selection-start-column="107" selection-end-line="2" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xunwu.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -818,8 +768,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build_online.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
         </state>
       </provider>
