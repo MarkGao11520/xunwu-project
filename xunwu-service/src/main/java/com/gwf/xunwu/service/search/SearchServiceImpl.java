@@ -596,26 +596,33 @@ public class SearchServiceImpl implements ISearchService{
          * 9.若查询结果集为1，说明已经存在，则更改
          * 10.若查询结果集多于1条，说明之前插入有异常情况，则删除重写创建
          */
+        // 1.查找房屋信息
         Long houseId = message.getHouseId();
         House house = houseRepository.findOne(houseId);
+        // 2.若房屋信息未空则重试发送消息
         if(null == house){
             log.error(LOG_PRE+"Index house {} dose not exist!",houseId);
             this.index(houseId,message.getRetry()+1);
             return;
         }
 
+        // 3.创建es房屋模板
         HouseIndexTemplate indexTemplate = new HouseIndexTemplate();
         modelMapper.map(house,indexTemplate);
 
+        // 4.查找房屋详情信息并放置进es模板
         HouseDetail detail = houseDetailRepository.findByHouseId(houseId);
         if(null == detail){
+            // 5.若详情信息未空则处理异常情况
             //TODO 异常情况
         }
         modelMapper.map(detail,indexTemplate);
 
+
         SupportAddress city = supportAddressRepository.findByEnNameAndLevel(house.getCityEnName(),SupportAddress.Level.CITY.getValue());
         SupportAddress region = supportAddressRepository.findByEnNameAndLevel(house.getRegionEnName(),SupportAddress.Level.REGION.getValue());
         String address = city.getCnName()+region.getCnName()+house.getStreet()+house.getDistrict()+detail.getDetailAddress();
+
 
         ServiceResult<BaiduMapLocation> location = addressService.getBaiduMapLocation(city.getCnName(),address);
         if(!location.isSuccess()){
@@ -625,13 +632,14 @@ public class SearchServiceImpl implements ISearchService{
         indexTemplate.setLocation(location.getResult());
 
 
-
+        // 6.查找房屋标签信息并放置进es模板
         List<HouseTag> tags = houseTagRepository.findAllByHouseId(houseId);
         if(!CollectionUtils.isEmpty(tags)){
             List<String> tagStrings = tags.stream().map(tag -> tag.getName()).collect(Collectors.toList());
             indexTemplate.setTags(tagStrings);
         }
 
+        // 7.es查询
         SearchRequestBuilder requestBuilder = this.esClient.prepareSearch(INDEX_NAME).setTypes(INDEX_TYPE)
                 .setQuery(QueryBuilders.termQuery(HouseIndexKey.HOUSE_ID,houseId));
 
@@ -641,11 +649,14 @@ public class SearchServiceImpl implements ISearchService{
         long totalHit = searchResponse.getHits().getTotalHits();
         boolean success;
         if(0==totalHit){
+            // 8.若无es信息则创建
             success = create(indexTemplate);
         }else if(1 == totalHit){
+            // 9.若查询结果集为1，说明已经存在，则更改
             String esId = searchResponse.getHits().getAt(0).getId();
             success = update(esId,indexTemplate);
         }else {
+            // 10.若查询结果集多于1条，说明之前插入有异常情况，则删除重写创建
             success = deleteAndCreate(totalHit,indexTemplate);
         }
 
@@ -655,6 +666,8 @@ public class SearchServiceImpl implements ISearchService{
                 .houseId(houseId)
                 .price((long) house.getPrice())
                 .area((long) house.getArea()).build();
+
+        // 创建百度地图API服务
         ServiceResult serviceResult = addressService.lbsUpload(baiduLbsDTO);
         if(!success || !serviceResult.isSuccess()){
             this.index(message.getHouseId(),message.getRetry()+1);

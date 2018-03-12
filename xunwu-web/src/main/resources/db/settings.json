@@ -3,6 +3,5 @@
   "transient":{
     // 禁用通配符删除
     "action.destructive_requires_name": true,
-
   }
 }

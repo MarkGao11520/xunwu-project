@@ -18,8 +18,6 @@
         <module>xunwu-facade</module>
         <module>xunwu-service</module>
         <module>xunwu-web</module>
-        <module>xunwu-security-core</module>
-        <module>xunwu-security-browser</module>
     </modules>
 
     <packaging>pom</packaging>

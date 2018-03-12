@@ -59,7 +59,7 @@ qiniu:
 #    prefix: http://p2y1v9py1.bkt.clouddn.com/
 
 es:
-  clusterName: gwf
+  clusterName: xunwu-es
   address:
     - ip: 127.0.0.1
       port: 9300

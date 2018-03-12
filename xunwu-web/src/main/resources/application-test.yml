@@ -4,4 +4,20 @@ spring:
     url: jdbc:h2:mem:test
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql
+  # thymeleaf
+  thymeleaf:
+    cache: false
+  http:
+    multipart:
+      enabled: true
+      location: /Users/gaowenfeng/project/idea/xunwu-project/xunwu-web/tmp/
+      file-size-threshold: 5MB
+      max-request-size: 20MB
+
+logging:
+  level:
+    com:
+      gwf:
+        xunwu:
+          search: debug
 

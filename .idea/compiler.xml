@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="xunwu-facade" />
         <module name="xunwu-repository" />
-        <module name="xunwu-security-core" />
         <module name="xunwu-service" />
         <module name="xunwu-web" />
       </profile>
@@ -17,8 +16,6 @@
       <module name="xunwu-facade" target="1.8" />
       <module name="xunwu-project" target="1.8" />
       <module name="xunwu-repository" target="1.8" />
-      <module name="xunwu-security-browser" target="1.8" />
-      <module name="xunwu-security-core" target="1.8" />
       <module name="xunwu-service" target="1.8" />
       <module name="xunwu-web" target="1.8" />
     </bytecodeTargetLevel>

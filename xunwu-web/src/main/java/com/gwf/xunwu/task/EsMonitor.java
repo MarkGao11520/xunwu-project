@@ -24,9 +24,9 @@ import java.io.IOException;
 @Slf4j
 public class EsMonitor {
     private static final String HEALTH_CHECK_API = "http://localhost:9200/_cluster/health";
-    private static final String GREEN = "red";
+    private static final String GREEN = "green";
     private static final String YELLOW = "yellow";
-    private static final String RED = "green";
+    private static final String RED = "red";
 
     @Autowired
     private ObjectMapper objectMapper;
