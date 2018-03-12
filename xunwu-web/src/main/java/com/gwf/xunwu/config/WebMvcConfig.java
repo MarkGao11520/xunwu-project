@@ -40,15 +40,15 @@ public class WebMvcConfig
         registry.addViewController("/500").setViewName("/500");
         registry.addViewController("/403").setViewName("/403");
         registry.addViewController("/logout/page").setViewName("/logout");
-        registry.addViewController("/").setViewName("/index");
-        registry.addViewController("/index").setViewName("/index");
-        registry.addViewController("/admin/center").setViewName("/admin/center");
-        registry.addViewController("/admin/welcome").setViewName("/admin/welcome");
+        registry.addViewController("/").setViewName("index");
+        registry.addViewController("/index").setViewName("index");
+        registry.addViewController("/admin/center").setViewName("admin/center");
+        registry.addViewController("/admin/welcome").setViewName("admin/welcome");
         registry.addViewController("/admin/house/list").setViewName("admin/house-list");
         registry.addViewController("/admin/house/subscribe").setViewName("admin/subscribe");
-        registry.addViewController("/admin/login").setViewName("/admin/login");
-        registry.addViewController("/user/login").setViewName("/user/login");
-        registry.addViewController("/user/center").setViewName("/user/center");
+        registry.addViewController("/admin/login").setViewName("admin/login");
+        registry.addViewController("/user/login").setViewName("user/login");
+        registry.addViewController("/user/center").setViewName("user/center");
     }
 
     /**

@@ -303,6 +303,7 @@ public class SearchServiceImpl implements ISearchService{
 
         SearchRequestBuilder requestBuilder = this.esClient.prepareSearch(INDEX_NAME)
                 .setTypes(INDEX_TYPE)
+                .setQuery(boolQuery)
                 .addAggregation(
                         AggregationBuilders.terms(HouseIndexKey.AGG_DISTRICT)
                         .field(HouseIndexKey.DISTRICT)

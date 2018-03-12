@@ -72,15 +72,15 @@
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-core</artifactId>
             <version>3.2.3</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/aliyun-java-sdk-core-3.2.3.jar</systemPath>
+            <!--<scope>system</scope>-->
+            <!--<systemPath>${project.basedir}/lib/aliyun-java-sdk-core-3.2.3.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
             <version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/aliyun-java-sdk-dysmsapi-1.0.0.jar</systemPath>
+            <!--<scope>system</scope>-->
+            <!--<systemPath>${project.basedir}/lib/aliyun-java-sdk-dysmsapi-1.0.0.jar</systemPath>-->
         </dependency>
     </dependencies>
 
