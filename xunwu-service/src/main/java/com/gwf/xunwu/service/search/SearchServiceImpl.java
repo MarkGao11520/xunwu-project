@@ -208,18 +208,18 @@ public class SearchServiceImpl implements ISearchService{
             }
 
             // TODO 关键词搜索的时候，加上其他条件，关键词几乎不起作用了，需要修改
-            boolQuery.should(QueryBuilders.matchQuery(HouseIndexKey.TITLE,search.getKeywords()).boost(2.0f))
+//            boolQuery.should(QueryBuilders.matchQuery(HouseIndexKey.TITLE,search.getKeywords()).boost(2.0f))
                     ;
 
-            boolQuery.should(
+            boolQuery.must(
                     QueryBuilders.multiMatchQuery(search.getKeywords(),
-                        HouseIndexKey.TRAFFIC,
-                        HouseIndexKey.DISTRICT,
-                        HouseIndexKey.ROUND_SERVICE,
-                        HouseIndexKey.SUBWAY_LINE_NAME,
-                        HouseIndexKey.SUBWAY_STATION_NAME
+                            HouseIndexKey.TITLE,
+                            HouseIndexKey.TRAFFIC,
+                            HouseIndexKey.DISTRICT,
+                            HouseIndexKey.ROUND_SERVICE,
+                            HouseIndexKey.SUBWAY_LINE_NAME,
+                            HouseIndexKey.SUBWAY_STATION_NAME
                     ));
-
             SearchRequestBuilder requestBuilder = this.esClient.prepareSearch(INDEX_NAME)
                     .setTypes(INDEX_TYPE)
                     .setQuery(boolQuery)
@@ -253,24 +253,30 @@ public class SearchServiceImpl implements ISearchService{
 
     @Override
     public ServiceResult<List<String>> suggest(String prefix) {
+        // 设置返回数量
         int maxSuggest = 5;
-        CompletionSuggestionBuilder suggestion = SuggestBuilders.completionSuggestion("suggest")
-                .prefix(prefix).size(5);
 
+        // 构造搜索建议对象，传入相应参数
+        CompletionSuggestionBuilder suggestion = SuggestBuilders.completionSuggestion("suggest")
+                .prefix(prefix).size(maxSuggest);
+
+        // 将搜索建议对象并指定搜索名，为后面查询结果做准备
         SuggestBuilder suggestBuilder = new SuggestBuilder();
         suggestBuilder.addSuggestion("autocomplete",suggestion);
 
-
+        // 构造请求体Request
         SearchRequestBuilder requestBuilder =  this.esClient.prepareSearch(INDEX_NAME)
                 .setTypes(INDEX_TYPE)
                 .suggest(suggestBuilder);
 
         log.debug(LOG_PRE+requestBuilder.toString());
 
+        // 获得执行结果
         SearchResponse response = requestBuilder.get();
         Suggest suggest = response.getSuggest();
         Suggest.Suggestion result = suggest.getSuggestion("autocomplete");
 
+        // 使用HashSet将结果集去重
         Set<String> suggestSet = new HashSet<>();
         for(Object term : result.getEntries()){
             if(term instanceof CompletionSuggestion.Entry){
@@ -290,6 +296,7 @@ public class SearchServiceImpl implements ISearchService{
                 break;
             }
         }
+        // 封装返回结果集
         List<String> suggestList = Lists.newArrayList(suggestSet.toArray(new String[]{}));
         return ServiceResult.of(suggestList);
     }
@@ -494,7 +501,6 @@ public class SearchServiceImpl implements ISearchService{
                     .get()
         );
     }
-
     /**
      * 更新索引
      * @param esId
@@ -509,7 +515,6 @@ public class SearchServiceImpl implements ISearchService{
                         .get()
         );
     }
-
     private interface Operate{
         /**
          * 操作并返回
@@ -518,7 +523,6 @@ public class SearchServiceImpl implements ISearchService{
          */
         DocWriteResponse doAndReturn() throws JsonProcessingException;
     }
-
     private boolean createOrUpdate(HouseIndexTemplate indexTemplate,String type,Operate operate) {
         if(!updateSuggest(indexTemplate)){
             return false;

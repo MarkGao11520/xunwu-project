@@ -67,6 +67,7 @@ es:
 baidu:
   map:
     serverKey: 6QtSF673D1pYl3eQkEXfwp8ZgsQpB77U
+#    serverKey: f40jbqRPtIH5igipC5y3dZwaQvTSBaWE
     geoConvApi: http://api.map.baidu.com/geocoder/v2/?
   lbs:
     create: http://api.map.baidu.com/geodata/v3/poi/create
@@ -74,15 +75,15 @@ baidu:
     update: http://api.map.baidu.com/geodata/v3/poi/update
     delete: http://api.map.baidu.com/geodata/v3/poi/delete
     tableId: 175730
+#    tableId: 184277
 
 # 阿里云短信配置 注意替换自己申请的配置
 aliyun:
   sms:
-    accessKey: LTAISjYxxr5qLmio
-    accessKeySecret: pkqEMJIcVQV8G5fkNEQNDQV7rsntKV
+    accessKey: LTAIJQ3naUKVA81W
+    accessKeySecret: GsOTWH2JS1FHtoDc2F4nafysrdOr30
     template:
-      code: SMS_95590008
-
+      code: SMS_129762943
 
 
 

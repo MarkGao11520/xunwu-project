@@ -13,7 +13,7 @@ echo "启动redis..."
 nohup redis-server &
 
 echo "打包项目..."
-mvn clean package -DskipTests
+# mvn clean package -DskipTests
 
 echo "启动项目..."
-nohup java -jar ./xunwu-web/target/xunwu-project.jar &
+# nohup java -jar ./xunwu-web/target/xunwu-project.jar &

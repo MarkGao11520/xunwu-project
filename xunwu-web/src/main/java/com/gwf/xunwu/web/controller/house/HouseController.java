@@ -267,6 +267,5 @@ public class HouseController {
         } else {
             return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), result.getMessage());
         }
-
     }
 }

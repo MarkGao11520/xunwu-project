@@ -20,7 +20,7 @@
         </dependency>
 
 
-        <!-- ModelMapper Simple, Intelligent, Object Mapping. -->
+        <!-- 常用库函数依赖-->
         <dependency>
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>

@@ -401,7 +401,7 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
     .xunwu-header .logo {
         background: url(/static/images/logo_bg.jpg);
-        background-size: 110px 55px;
+        background-size: 100px 55px;
     }
 }
 
