@@ -340,9 +340,11 @@
 
     function locate_url(start, size) {
         var keywords = $('#keyword-box').val();
+    //    alert("keywords=["+keywords+"]");
         if (typeof(keywords) !== 'undefined' && keywords !== null && keywords.length > 0) {
             data.keywords = keywords;
         }
+    //    alert("data=["+JSON.stringify(data)+"]");
 
         var target = '/rent/house?cityEnName=' + [[${searchBody.cityEnName}]] + '&';
         $.each(data, function (key, value) {
@@ -449,7 +451,7 @@
                 });
             },
             select: function (event, ui) { // 选中事件
-                $('#keyword-box').text(ui.item.value);
+                $('#keyword-box').val(ui.item.value);
                 window.location.href = locate_url(start, size);
             }
         });

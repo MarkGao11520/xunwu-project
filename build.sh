@@ -1,5 +1,5 @@
 # xunwu-project 一键启动
-
+=
 echo "启动zk..."
 zkServer.sh start
 
