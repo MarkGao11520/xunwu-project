@@ -28,8 +28,8 @@ spring:
       group-id: xunwu_topic
   mail:
     host: smtp.163.com
-    username: 17602686137@163.com
-    password: AIjd13141
+    username: @163.com
+    password: 
     properties:
       mail:
         smtp:
@@ -51,8 +51,8 @@ server:
 
 
 qiniu:
-  AccessKey: W6roYXp9jDFiem-tjgqvoTF3lHIk_YFHhP_8l0_f
-  SecretKey: 6gJo1vhBXB9MrtXYVUY0Tz85677TkQ6Qj6yf5Nfe
+  AccessKey: -
+  SecretKey: 
   Bucket: xunwu-image-repository
   cdn:
     prefix: http://7xo6gy.com1.z0.glb.clouddn.com/
@@ -66,7 +66,7 @@ es:
 
 baidu:
   map:
-    serverKey: 6QtSF673D1pYl3eQkEXfwp8ZgsQpB77U
+    serverKey: 
 #    serverKey: f40jbqRPtIH5igipC5y3dZwaQvTSBaWE
     geoConvApi: http://api.map.baidu.com/geocoder/v2/?
   lbs:
@@ -80,10 +80,10 @@ baidu:
 # 阿里云短信配置 注意替换自己申请的配置
 aliyun:
   sms:
-    accessKey: LTAIJQ3naUKVA81W
-    accessKeySecret: GsOTWH2JS1FHtoDc2F4nafysrdOr30
+    accessKey: 
+    accessKeySecret: 
     template:
-      code: SMS_129762943
+      code: 
 
 
 
